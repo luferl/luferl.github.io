@@ -1,0 +1,88 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>列表</title>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<style>
+	*{
+		margin:0;
+		padding: 0;
+	}
+	
+	body{
+		background-color: #eeeeee;
+	}
+	
+	.container{
+		width: 1000px;
+		height: 450px;
+		margin:60px auto;
+		position: relative;
+	}
+	
+	.container img{
+		padding: 10px 10px 15px ;
+		background:white;
+		border: 1px solid #ddd;
+		box-shadow: 2px 2px 3px rgba(50,50,50,0.4);
+	}
+	.box {
+			display: inline-block;
+			color: #FFF;
+			background: #000;
+			padding: 10px;
+			margin: 10px;
+			cursor: pointer;
+		}
+	.pic{
+		width: 200px;
+		margin-right: 1%;
+	}
+	
+	.container>img:hover{
+		opacity:0.6;
+	}
+</style>
+</head>
+<body>
+	
+	<div style="height:60px; width:100%; ">
+		<p>
+		  <div id="prev" class="box" style="float: left;" onclick="goPrev()"> 上一页 </div>
+		  <div id="next" class="box" style="float: right;" onclick="goNext()"> 下一页 </div>
+		</p>
+	</div>
+	<div class="container"id="contain" style="clear: both;"></div>
+</div>
+</body>
+<script>
+	function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+            if (r != null) return unescape(r[2]); return null; //返回参数值
+      }
+	var pagenum = getUrlParam('page');
+	if(pagenum==null)
+	  	pagenum=1;
+	var firid=(pagenum-1)*12+1;
+	var lasid=firid+11;
+    for(i=firid;i<=lasid;i++)
+        $("#contain").append("<img class='pic pic0' src='https://pic.lufer.cc/images/wipeimgres/"+i+"-1.jpg' onclick='gotodetail("+i+")'>");
+    
+	function gotodetail(id)
+    {
+        location.href="./detail.html?id="+id;
+    }
+	function goPrev(){
+		if(pagenum==1)
+		 	return;
+		else
+			location.href="./index.html?page="+(pagenum-1);
+	}
+	function goNext(){
+		location.href="./index.html?page="+(pagenum+1);
+	}
+
+</script>
