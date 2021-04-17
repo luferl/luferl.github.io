@@ -1,7 +1,7 @@
 ---
 title: Hexo+GitHub搭建博客(二)  主题配置
 date: 2018-05-17 21:17:36
-categories: 前端
+categories: Hexo
 tags: [Github,Hexo]
 ---
 &emsp;&emsp;以yilia为例。

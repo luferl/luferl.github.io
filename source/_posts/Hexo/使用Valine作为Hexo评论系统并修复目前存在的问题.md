@@ -1,7 +1,7 @@
 ---
 title: 使用Valine作为Hexo评论系统并修复目前存在的问题
 date: 2020-12-21 09:41:27
-categories: 前端
+categories: Hexo
 tags: [Github,Hexo]
 ---
 

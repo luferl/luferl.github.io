@@ -1,7 +1,7 @@
 ---
 title: Melody主题个性化修改memo
 date: 2020-12-28 17:00:37
-categories: 前端
+categories: Hexo
 tags: [Github,Hexo]
 ---
 

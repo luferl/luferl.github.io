@@ -1,7 +1,7 @@
 ---
 title: Hexo+VsCode 在IDE中完成博客的一切操作
 date: 2018-06-09 14:27:30
-categories: 前端
+categories: Hexo
 tags: [Hexo,前端]
 ---
 # 插件安装

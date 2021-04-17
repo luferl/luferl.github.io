@@ -1,7 +1,7 @@
 ---
 title: 按目录存储Hexo文章并修改生成的链接
 date: 2021-04-06 11:59:30
-categories: 前端
+categories: Hexo
 tags: [Github,Hexo]
 ---
 &emsp;&emsp;随着Hexo文章逐渐变多，都放在source文件夹下的话想找某篇文章进行管理就显得有些痛苦了，所以这次我打算建立一些文件夹按照不同类别来管理文章。
