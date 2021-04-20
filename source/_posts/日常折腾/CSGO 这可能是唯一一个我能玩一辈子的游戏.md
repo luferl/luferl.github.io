@@ -2,7 +2,8 @@
 title: CSGO 这可能是唯一一个我能玩一辈子的游戏
 categories: thought
 date: 2017-03-26 17:45:56
-tags:
+tags: [日常折腾]
+categories: 日常折腾
 ---
 [![](https://pic.lufer.cc/images/2021/03/15/e4Ox2V.jpg)](https://pic.lufer.cc/image/xEZ)
 &emsp;&emsp;前一阵翻CSGO截图，才发现不知不觉这个游戏我已经玩了3年了，这3年有时候开心，有时候也生气，但却从来没有腻过。 附上我最喜欢的皮肤，没有之一。    
