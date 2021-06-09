@@ -1,0 +1,363 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="自建KMS激活Windows和Office"><meta name="keywords" content="日常折腾"><meta name="author" content="Lufer"><meta name="copyright" content="Lufer"><title>自建KMS激活Windows和Office | Lufer</title><link rel="shortcut icon" href="https://pic.lufer.cc/images/2021/03/15/eI1NJH.png"><link rel="stylesheet" href="/css/index.css?version=1.9.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.css"><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.js" defer></script><link rel="dns-prefetch" href="https://hm.baidu.com"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?e2cd7e52254704223bd3b9c0461bc06e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();</script><script src="https://www.googletagmanager.com/gtag/js?id=G-T5L2KPFS29"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-T5L2KPFS29');</script><script src="https://v1.hitokoto.cn/?encode=js&amp;charset=utf-8&amp;select=.footer_custom_text" defer></script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"D3K0O2R6F2","apiKey":"4e808ae377111360493e99d31970584c","indexName":"BLOG_LUFER","hits":{"per_page":10},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容:${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  hexoVersion: '5.3.0'
+} </script><meta name="generator" content="Hexo 5.3.0"></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#windows%E6%BF%80%E6%B4%BB"><span class="toc-text"> Windows激活</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#windows-10"><span class="toc-text"> Windows 10</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#windows-7"><span class="toc-text"> Windows 7</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#windows-8"><span class="toc-text"> Windows 8</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#windows-server"><span class="toc-text"> Windows Server</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#office%E6%BF%80%E6%B4%BB"><span class="toc-text"> Office激活</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#office-tool-plus%E6%BF%80%E6%B4%BB"><span class="toc-text"> Office Tool Plus激活</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%8B%E5%8A%A8%E6%BF%80%E6%B4%BB"><span class="toc-text"> 手动激活</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://pic.lufer.cc/images/2021/03/15/eI1UWd.jpg"></div><div class="author-info__name text-center">Lufer</div><div class="author-info__description text-center">新的一天开始啦</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">69</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">30</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">17</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">大佬们</div><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="https://www.yuque.com/grace-gu">Grace</a><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="http://1ogisk.cn/">Logik</a><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="https://blog.legume.ltd">豆哥</a><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="http://esportnosave.cn/">EsportsNoSave</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://pic.lufer.cc/images/2021/03/15/eI1dSA.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Lufer</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">主页</a><a class="site-page" href="/archives">归档</a><a class="site-page" href="/categories">分类</a><a class="site-page" href="/tags">标签</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a></span></div><div id="post-info"><div id="post-title">自建KMS激活Windows和Office</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2021-04-22</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E6%97%A5%E5%B8%B8%E6%8A%98%E8%85%BE/">日常折腾</a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">1.4k</span><span class="post-meta__separator">|</span><span>阅读时长: 6 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>  KMS在服务器可用的情况下会自动续期，只要不关闭KMS的服务或计划任务，所以并不需要180天手动激活一次。</p>
+<h1 id="windows激活"><a class="markdownIt-Anchor" href="#windows激活"></a> Windows激活</h1>
+<p>  下文提供了各个windows版本的GVLK秘钥，可以在安装系统时即输入该初始秘钥，也可安装后手动设置。</p>
+<p>  激活方式:<br />
+  以管理员身份运行 Windows PowerShell或CMD，输入如下命令。</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">#如果安装时即输入了初始秘钥，可以跳过前两步。</span><br><span class="line">slmgr /upk</span><br><span class="line"># 卸载当前产品密钥</span><br><span class="line">slmgr /ipk 秘钥序列号</span><br><span class="line"># 安装产品密钥 (参考下文 GVLK 密钥)</span><br><span class="line">slmgr /skms kms.xxxxx.com</span><br><span class="line"># 设置 KMS 服务器</span><br><span class="line">slmgr /ato</span><br><span class="line"># 立即激活</span><br><span class="line">slmgr /xpr</span><br><span class="line"># 查看激活剩余时间</span><br><span class="line">slmgr /dlv</span><br><span class="line"># 查看激活详细信息</span><br></pre></td></tr></table></figure>
+<h2 id="windows-10"><a class="markdownIt-Anchor" href="#windows-10"></a> Windows 10</h2>
+<table>
+<thead>
+<tr>
+<th>操作系统版本</th>
+<th>KMS 客户端安装程序密钥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows 10 专业版</td>
+<td>W269N-WFGWX-YVC9B-4J6C9-T83GX</td>
+</tr>
+<tr>
+<td>Windows 10 专业版 N</td>
+<td>MH37W-N47XK-V7XM9-C7227-GCQG9</td>
+</tr>
+<tr>
+<td>Windows 10 专业工作站版</td>
+<td>NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J</td>
+</tr>
+<tr>
+<td>Windows 10 专业工作站版 N</td>
+<td>9FNHH-K3HBT-3W4TD-6383H-6XYWF</td>
+</tr>
+<tr>
+<td>Windows 10 专业教育版</td>
+<td>6TP4R-GNPTD-KYYHQ-7B7DP-J447Y</td>
+</tr>
+<tr>
+<td>Windows 10 专业教育版 N</td>
+<td>YVWGF-BXNMC-HTQYQ-CPQ99-66QFC</td>
+</tr>
+<tr>
+<td>Windows 10 教育版</td>
+<td>NW6C2-QMPVW-D7KKK-3GKT6-VCFB2</td>
+</tr>
+<tr>
+<td>Windows 10 教育版 N</td>
+<td>2WH4N-8QGBV-H22JP-CT43Q-MDWWJ</td>
+</tr>
+<tr>
+<td>Windows 10 企业版</td>
+<td>NPPR9-FWDCX-D2C8J-H872K-2YT43</td>
+</tr>
+<tr>
+<td>Windows 10 企业版 N</td>
+<td>DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4</td>
+</tr>
+<tr>
+<td>Windows 10 企业版 G</td>
+<td>YYVX9-NTFWV-6MDM3-9PT4T-4M68B</td>
+</tr>
+<tr>
+<td>Windows 10 企业版 G N</td>
+<td>44RPN-FTY23-9VTTB-MP9BX-T84FV</td>
+</tr>
+<tr>
+<td>Windows 10 企业版 LTSC 2019</td>
+<td>M7XTQ-FN8P6-TTKYV-9D4CC-J462D</td>
+</tr>
+<tr>
+<td>Windows 10 企业版 N LTSC 2019</td>
+<td>92NFX-8DJQP-P6BBQ-THF9C-7CG2H</td>
+</tr>
+</tbody>
+</table>
+<h2 id="windows-7"><a class="markdownIt-Anchor" href="#windows-7"></a> Windows 7</h2>
+<table>
+<thead>
+<tr>
+<th>操作系统版本</th>
+<th>KMS 客户端安装程序密钥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows 7 专业版</td>
+<td>FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4</td>
+</tr>
+<tr>
+<td>Windows 7 专业版 N</td>
+<td>MRPKT-YTG23-K7D7T-X2JMM-QY7MG</td>
+</tr>
+<tr>
+<td>Windows 7 专业版 E</td>
+<td>W82YF-2Q76Y-63HXB-FGJG9-GF7QX</td>
+</tr>
+<tr>
+<td>Windows 7 企业版</td>
+<td>33PXH-7Y6KF-2VJC9-XBBR8-HVTHH</td>
+</tr>
+<tr>
+<td>Windows 7 企业版 N</td>
+<td>YDRBP-3D83W-TY26F-D46B2-XCKRJ</td>
+</tr>
+<tr>
+<td>Windows 7 企业版 E</td>
+<td>C29WB-22CC8-VJ326-GHFJW-H9DH4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="windows-8"><a class="markdownIt-Anchor" href="#windows-8"></a> Windows 8</h2>
+<table>
+<thead>
+<tr>
+<th>操作系统版本</th>
+<th>KMS 客户端安装程序密钥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows 8.1 专业版</td>
+<td>GCRJD-8NW9H-F2CDX-CCM8D-9D6T9</td>
+</tr>
+<tr>
+<td>Windows 8.1 专业版 N</td>
+<td>HMCNV-VVBFX-7HMBH-CTY9B-B4FXY</td>
+</tr>
+<tr>
+<td>Windows 8.1 企业版</td>
+<td>MHF9N-XY6XB-WVXMC-BTDCT-MKKG7</td>
+</tr>
+<tr>
+<td>Windows 8.1 企业版 N</td>
+<td>TT4HM-HN7YT-62K67-RGRQJ-JFFXW</td>
+</tr>
+<tr>
+<td>Windows 8 专业版</td>
+<td>NG4HW-VH26C-733KW-K6F98-J8CK4</td>
+</tr>
+<tr>
+<td>Windows 8 专业版 N</td>
+<td>XCVCF-2NXM9-723PB-MHCB7-2RYQQ</td>
+</tr>
+<tr>
+<td>Windows 8 企业版</td>
+<td>32JNW-9KQ84-P47T8-D8GGY-CWCK7</td>
+</tr>
+<tr>
+<td>Windows 8 企业版 N</td>
+<td>JMNMF-RHW7P-DMY6X-RF3DR-X2BQT</td>
+</tr>
+</tbody>
+</table>
+<h2 id="windows-server"><a class="markdownIt-Anchor" href="#windows-server"></a> Windows Server</h2>
+<table>
+<thead>
+<tr>
+<th>操作系统版本</th>
+<th>KMS 客户端安装程序密钥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows Server Datacenter</td>
+<td>6NMRW-2C8FM-D24W7-TQWMY-CWH2D</td>
+</tr>
+<tr>
+<td>Windows Server Standard</td>
+<td>N2KJX-J94YW-TQVFB-DG9YT-724CC</td>
+</tr>
+<tr>
+<td>Windows Server 2019 Datacenter</td>
+<td>WMDGN-G9PQG-XVVXX-R3X43-63DFG</td>
+</tr>
+<tr>
+<td>Windows Server 2019 Standard</td>
+<td>N69G4-B89J2-4G8F4-WWYCC-J464C</td>
+</tr>
+<tr>
+<td>Windows Server 2019 Essentials</td>
+<td>WVDHN-86M7X-466P6-VHXV7-YY726</td>
+</tr>
+<tr>
+<td>Windows Server 2016 Datacenter</td>
+<td>CB7KF-BWN84-R7R2Y-793K2-8XDDG</td>
+</tr>
+<tr>
+<td>Windows Server 2016 Standard</td>
+<td>WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY</td>
+</tr>
+<tr>
+<td>Windows Server 2016 Essentials</td>
+<td>JCKRF-N37P4-C2D82-9YXRT-4M63B</td>
+</tr>
+<tr>
+<td>Windows Server 2012 R2 Server Standard</td>
+<td>D2N9P-3P6X9-2R39C-7RTCD-MDVJX</td>
+</tr>
+<tr>
+<td>Windows Server 2012 R2 Datacenter</td>
+<td>W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9</td>
+</tr>
+<tr>
+<td>Windows Server 2012 R2 Essentials</td>
+<td>KNC87-3J2TX-XB4WP-VCPJV-M4FWM</td>
+</tr>
+<tr>
+<td>Windows Server 2012</td>
+<td>BN3D2-R7TKB-3YPBD-8DRP2-27GG4</td>
+</tr>
+<tr>
+<td>Windows Server 2012 N</td>
+<td>8N2M2-HWPGY-7PGT9-HGDD8-GVGGY</td>
+</tr>
+<tr>
+<td>Windows Server 2012 单语言版</td>
+<td>2WN2H-YGCQR-KFX6K-CD6TF-84YXQ</td>
+</tr>
+<tr>
+<td>Windows Server 2012 特定国家/地区版</td>
+<td>4K36P-JN4VD-GDC6V-KDT89-DYFKP</td>
+</tr>
+<tr>
+<td>Windows Server 2012 Server 标准版</td>
+<td>XC9B7-NBPP2-83J2H-RHMBY-92BT4</td>
+</tr>
+<tr>
+<td>Windows Server 2012 MultiPoint 标准版</td>
+<td>HM7DN-YVMH3-46JC3-XYTG7-CYQJJ</td>
+</tr>
+<tr>
+<td>Windows Server 2012 MultiPoint 高级版</td>
+<td>XNH6W-2V9GX-RGJ4K-Y8X6F-QGJ2G</td>
+</tr>
+<tr>
+<td>Windows Server 2012 Datacenter</td>
+<td>48HP8-DN98B-MYWDG-T2DCC-8W83P</td>
+</tr>
+<tr>
+<td>Windows Server 2008 R2 Web 版</td>
+<td>6TPJF-RBVHG-WBW2R-86QPH-6RTM4</td>
+</tr>
+<tr>
+<td>Windows Server 2008 R2 HPC 版</td>
+<td>TT8MH-CG224-D3D7Q-498W2-9QCTX</td>
+</tr>
+<tr>
+<td>Windows Server 2008 R2 标准版</td>
+<td>YC6KT-GKW9T-YTKYR-T4X34-R7VHC</td>
+</tr>
+<tr>
+<td>Windows Server 2008 R2 企业版</td>
+<td>489J6-VHDMP-X63PK-3K798-CPX3Y</td>
+</tr>
+<tr>
+<td>Windows Server 2008 R2 Datacenter</td>
+<td>74YFP-3QFB3-KQT8W-PMXWJ-7M648</td>
+</tr>
+<tr>
+<td>面向基于 Itanium 系统的 Windows Server 2008 R2</td>
+<td>GT63C-RJFQ3-4GMB6-BRFB9-CB83V</td>
+</tr>
+<tr>
+<td>Windows Web Server 2008</td>
+<td>WYR28-R7TFJ-3X2YQ-YCY4H-M249D</td>
+</tr>
+<tr>
+<td>Windows Server 2008 标准版</td>
+<td>TM24T-X9RMF-VWXK6-X8JC9-BFGM2</td>
+</tr>
+<tr>
+<td>不带 Hyper-V 的 Windows Server 2008 标准版</td>
+<td>W7VD6-7JFBR-RX26B-YKQ3Y-6FFFJ</td>
+</tr>
+<tr>
+<td>Windows Server 2008 企业版</td>
+<td>YQGMW-MPWTJ-34KDK-48M3W-X4Q6V</td>
+</tr>
+<tr>
+<td>不带 Hyper-V 的 Windows Server 2008 企业版</td>
+<td>39BXF-X8Q23-P2WWT-38T2F-G3FPG</td>
+</tr>
+<tr>
+<td>Windows Server 2008 HPC</td>
+<td>RCTX3-KWVHP-BR6TB-RB6DM-6X7HP</td>
+</tr>
+<tr>
+<td>Windows Server 2008 Datacenter</td>
+<td>7M67G-PC374-GR742-YH8V4-TCBY3</td>
+</tr>
+<tr>
+<td>不带 Hyper-V 的 Windows Server 2008 数据中心版</td>
+<td>22XQ2-VRXRG-P8D42-K34TD-G3QQC</td>
+</tr>
+<tr>
+<td>面向基于 Itanium 系统的 Windows Server 2008</td>
+<td>4DWFP-JF3DJ-B7DTH-78FJB-PDRHK</td>
+</tr>
+</tbody>
+</table>
+<h1 id="office激活"><a class="markdownIt-Anchor" href="#office激活"></a> Office激活</h1>
+<p>  使用KMS激活Office，需要安装<code>VOL（批量版）</code>版本。<br />
+  可以自行下载所需版本的VOL安装包，VOL会自带初始秘钥，无需手动填写。</p>
+<p>  强烈推荐使用Office Tool Plus进行安装，同时更推荐用这个工具来卸载老版本的Office。<br />
+  <a target="_blank" rel="noopener" href="https://otp.landian.vip/zh-cn/%E3%80%82">https://otp.landian.vip/zh-cn/。</a></p>
+<h2 id="office-tool-plus激活"><a class="markdownIt-Anchor" href="#office-tool-plus激活"></a> Office Tool Plus激活</h2>
+<p>  打开Office Tool Plus，进入部署功能，选择所需版本的批量授权版，进行安装，由于Office套装不带Visio，我这里还额外添加了Visio，选好之后点右上角“开始部署”即可。</p>
+<p><img src="https://pic.lufer.cc/images/2021/04/22/image.png" alt="部署" /></p>
+<p>  随后会进入自动安装过程。</p>
+<p><img src="https://pic.lufer.cc/images/2021/04/22/image5b3b15c6e68d1379.png" alt="开始安装" /></p>
+<p>返回首页，进入激活功能。</p>
+<p><img src="https://pic.lufer.cc/images/2021/04/22/imagec0f74af727608cab.png" alt="激活界面" /></p>
+<p>  展开许可证管理，选择刚才安装的产品，然后安装许可证。<br />
+  如果安装了其他产品，需要都安装许可证，例如我装了Visio，就还要在安装一次Visio的许可证。<br />
+  展开KMS管理，输入KMS主机地址，点击保存设置。<br />
+  最后点击右上角激活。</p>
+<p>  成功激活。</p>
+<p><img src="https://pic.lufer.cc/images/2021/04/22/imaged294b529ce92b2cf.png" alt="激活成功" /></p>
+<h2 id="手动激活"><a class="markdownIt-Anchor" href="#手动激活"></a> 手动激活</h2>
+<p>  以Office2016为例，查找 Office 安装目录，默认情况下 Office 2016 64 位版安装目录为<code>C:\Program Files\Microsoft Office\Office16</code>，其他版本请自行查找。<br />
+  以管理员身份运行 Windows PowerShell或CMD，输入如下命令。</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> &quot;C:\Program Files\Microsoft Office\Office16&quot;</span><br><span class="line"># 进入 Office 安装目录,请自行根据安装的 Office 版本修改目录.</span><br><span class="line">cscript ospp.vbs /dstatus</span><br><span class="line"># 查看当前激活状态,期限,版本,密钥等信息.安装 <span class="built_in">VOL</span> 版 Office 默认情况下已安装产品密钥.继续执行以下步骤激活.</span><br><span class="line">cscript ospp.vbs /sethst:kms.xxxxx.com</span><br><span class="line"># 设置 KMS 服务器</span><br><span class="line">cscript ospp.vbs /act</span><br><span class="line"># 立即激活</span><br></pre></td></tr></table></figure></div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Lufer</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://coder.lufer.cc/日常折腾/自建KMS激活Windows和Office/">https://coder.lufer.cc/日常折腾/自建KMS激活Windows和Office/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://coder.lufer.cc">Lufer</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%97%A5%E5%B8%B8%E6%8A%98%E8%85%BE/">日常折腾</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/Hexo/Markdown%E4%B8%ADLatex%E8%AF%AD%E6%B3%95/"><span>Markdown中Latex语法</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="vcomment"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = 'true' == 'true';
+var verify = 'false' == 'true';
+var record_ip = '' == 'true';
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  recordIP:record_ip,
+  appId:'VqMxq8YhQKdt87hjlDYA4UDq-MdYXbMMI',
+  appKey:'jMbPNFw1782lMDtEz6mIwhx4',
+  placeholder:'早8点-晚11点会自动发送邮件提醒',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang: 'zh-cn'
+})</script></div></div><footer class="footer-bg" style="background-image: url(https://pic.lufer.cc/images/2021/03/15/eI1dSA.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2016 - 2021 By Lufer</div><div class="framework-info"><span>驱动 - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="footer_custom_text">hitokoto</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.0"></script><script src="/js/fancybox.js?version=1.9.0"></script><script src="/js/sidebar.js?version=1.9.0"></script><script src="/js/copy.js?version=1.9.0"></script><script src="/js/fireworks.js?version=1.9.0"></script><script src="/js/transition.js?version=1.9.0"></script><script src="/js/scroll.js?version=1.9.0"></script><script src="/js/head.js?version=1.9.0"></script><script src="/js/search/algolia.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css"><script src="/js/katex.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="algolia-search"><div class="search-dialog__title" id="algolia-search-title">Algolia</div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><hr><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
