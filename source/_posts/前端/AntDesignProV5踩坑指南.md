@@ -175,6 +175,46 @@ export default class IdentityofPerson extends PureComponent {
     "ChineseIDCard": "1231231"
 }
 ```
+# 使用区块
+&emsp;&emsp;AntDesign预先封装了一些组件模板，起名叫做`区块`，通过引入区块通过简单修改快速的实现页面。
 
+&emsp;&emsp;但是这个区块想用起来可真TM费事!!
+
+&emsp;&emsp;首先是官方文档里面对于区块的介绍。  
+&emsp;&emsp;https://pro.ant.design/zh-CN/docs/assets/  
+&emsp;&emsp;光介绍了什么是区块，怎么用区块，但是没告诉你都有什么区块，也没给你链接。
+
+&emsp;&emsp;最后还是在github上面找到了全部的区块库。  
+&emsp;&emsp;https://github.com/ant-design/pro-blocks
+
+&emsp;&emsp;随便点进去一个区块，readme里面写了个命令教你怎么安装。
+
+![区块readme](https://pic.lufer.cc/images/2021/08/03/image.png)
+
+&emsp;&emsp;你以为你用这个命令能装上？Navie，直接给你一个报错，让你当场懵逼。
+
+![报错](https://pic.lufer.cc/images/2021/08/03/image380b55601b8c34b5.png)
+
+&emsp;&emsp;最后搜到了一个issue，https://github.com/ant-design/ant-design-pro/issues/4534
+
+&emsp;&emsp;这个issue下面有一个开发者说了一句话：
+
+![开发者回复](https://pic.lufer.cc/images/2021/08/03/imagec6eeffa7aa285503.png)
+
+&emsp;&emsp;你以为你把命令改成`umi block add AccountSettings`就行了？Naive，会报跟先前一样的错。
+
+&emsp;&emsp;最后还是这个提问的人提供了一个解决办法。
+
+>后续：经过测试，使用umi block add https://github.com/ant-design/pro-blocks/tree/master/UserLogin可以正常安装。
+
+&emsp;&emsp;于是我把命令改成了`umi block add https://github.com/ant-design/pro-blocks/tree/master/AccountSettings`，安装成功。
+
+安装成功之后页面起不来，控制台报错：
+![缺少组件](https://pic.lufer.cc/images/2021/08/03/image30e044d1c08dfac3.png)
+
+&emsp;&emsp;试图删掉node_modules重新`npm install`结果项目整个起不来了，最后还是特么重新建的项目，不想整这个区块了，还不如自己写。
+
+&emsp;&emsp;服了。
 
 &emsp;&emsp;未完待续，边填坑边记录。
+
