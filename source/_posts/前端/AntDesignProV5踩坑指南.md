@@ -1,5 +1,5 @@
 ---
-title: AntDesign Pro V5 踩坑指南踩坑指南
+title: AntDesign Pro V5 踩坑指南
 date: 2021-07-30 16:37:50
 categories: 前端
 tags: [React,前端]
@@ -141,24 +141,40 @@ export default function access(initialState) {
     component: './user/AccountManage',
   },
 ```
-# 手动操作表单内容
-&emsp;&emsp;如果要取一个Form里面各项内容的值，需要创建一个formRef，和form绑定之后就可以取值。
+
+## 路由逻辑
+routes.js应该是一个自上而下的逐个适配过程，当找到能匹配的规则时就执行跳转，不再向下执行，所以通配符一定要放在最后面。
 ```js
-export default class IdentityofPerson extends PureComponent {
-  formRefofModal=React.createRef();   //创建一个formRef
+  //前面都不匹配，检查/
+  {
+    path: '/',
+    redirect: '/index',
+  },
+  //所有的都没有匹配，跳转404
+  {
+    component: './404',
+  },
+];
+```
+
+# 手动操作表单内容
+&emsp;&emsp;如果要取一个Form里面各项内容的值，需要创建一个formInstance，和form绑定之后就可以取值。
+```js
+export default ()=>{
+  const [formRefofModal]=Form.useForm();   //创建一个formInstance
   ......
   function(){
       //在需要的地方通过formRef.current.getFieldsValue来取值
-      const values=this.formRefofModal.current.getFieldsValue(true);
+      const values=formRefofModal.getFieldsValue(true);
       console.log(values);
       //通过formRef.current.resetFields来快速重置表单项。
-      this.formRefofDrawer.current.resetFields();
+      formRefofModal.resetFields();
   }
   ......
   render(){
       ......
-        // 通过ref属性绑定到创建的ref
-         <Form layout="vertical" hideRequiredMark ref={this.formRefofModal}> 
+        // 通过form属性绑定到创建的ref
+         <Form layout="vertical" hideRequiredMark form={formRefofModal}> 
             ......
       ......
   }
