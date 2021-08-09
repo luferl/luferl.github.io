@@ -8,30 +8,6 @@ tags: [React,前端]
 
 &emsp;&emsp;官网见：https://umijs.org/zh-CN/plugins/plugin-request
 
-
-# 简单请求
-&emsp;&emsp;简单的请求可以在useRequest中直接实现，官方给出了几种示例写法，但是并没有太过具体的介绍。
-
-```js
-// 用法 1
-const { data, error, loading } = useRequest('/api/userInfo');
-​
-// 用法 2
-const { data, error, loading } = useRequest({
-  url: '/api/changeUsername',
-  method: 'post',
-});
-​
-// 用法 3
-const { data, error, loading, run } = useRequest((userId)=> `/api/userInfo/${userId}`);
-​
-// 用法 4
-const { loading, run } = useRequest((username) => ({
-  url: '/api/changeUsername',
-  method: 'post',
-  data: { username },
-}));
-```
 # 创建请求发起函数
 &emsp;&emsp;为了使代码更便于阅读，还是将请求抽离成函数来实现。
 
@@ -78,3 +54,28 @@ export default function IdentityModelTest() {
 }
 ```
 &emsp;&emsp;至此完成了在需要时的请求发起，参数传递，以及返回值处理。
+
+# 其他请求
+&emsp;&emsp;官方给出了一些直接使用useRequest发送请求的示例，但是这里要注意，如果系统检测到了第一个传入参数是字符串，将会直接发起请求，useRequest提供的其他接口例如manual，onSuccess，onError等都不会再生效，如果要使用这些API，一定要传入函数。
+&emsp;&emsp;下面是几种官方示例写法。
+
+```js
+// 用法 1
+const { data, error, loading } = useRequest('/api/userInfo');
+​
+// 用法 2
+const { data, error, loading } = useRequest({
+  url: '/api/changeUsername',
+  method: 'post',
+});
+​
+// 用法 3
+const { data, error, loading, run } = useRequest((userId)=> `/api/userInfo/${userId}`);
+​
+// 用法 4
+const { loading, run } = useRequest((username) => ({
+  url: '/api/changeUsername',
+  method: 'post',
+  data: { username },
+}));
+```
