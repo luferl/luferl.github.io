@@ -1,0 +1,219 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="攻防世界MISC新手练习题"><meta name="keywords" content="CTF"><meta name="author" content="Lufer"><meta name="copyright" content="Lufer"><title>攻防世界MISC新手练习题 | Lufer</title><link rel="shortcut icon" href="https://pic.lufer.cc/images/2021/03/15/eI1NJH.png"><link rel="stylesheet" href="/css/index.css?version=1.9.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.css"><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.js" defer></script><link rel="dns-prefetch" href="https://hm.baidu.com"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?e2cd7e52254704223bd3b9c0461bc06e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();</script><script src="https://www.googletagmanager.com/gtag/js?id=G-T5L2KPFS29"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-T5L2KPFS29');</script><script src="https://v1.hitokoto.cn/?encode=js&amp;charset=utf-8&amp;select=.footer_custom_text" defer></script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"D3K0O2R6F2","apiKey":"4e808ae377111360493e99d31970584c","indexName":"BLOG_LUFER","hits":{"per_page":10},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容:${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  hexoVersion: '5.3.0'
+} </script><meta name="generator" content="Hexo 5.3.0"></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#this_is_flag"><span class="toc-text"> this_is_flag</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94"><span class="toc-text"> 解答</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pdf"><span class="toc-text"> pdf</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-2"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94-2"><span class="toc-text"> 解答</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E6%9D%A5%E5%8D%81%E4%B8%89%E6%8E%8C"><span class="toc-text"> 如来十三掌</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-3"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94-3"><span class="toc-text"> 解答</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#give_you_flag"><span class="toc-text"> give_you_flag</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-4"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94-4"><span class="toc-text"> 解答</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#stegano"><span class="toc-text"> stegano</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-5"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94-5"><span class="toc-text"> 解答</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9D%9A%E6%8C%8160s"><span class="toc-text"> 坚持60s</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-6"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94-6"><span class="toc-text"> 解答</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#gif"><span class="toc-text"> gif</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-7"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94-7"><span class="toc-text"> 解答</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%80%E6%A1%8C%E5%AD%90"><span class="toc-text"> 掀桌子</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94-8"><span class="toc-text"> 解答</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ext3"><span class="toc-text"> ext3</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-8"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94-9"><span class="toc-text"> 解答</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#simplerar"><span class="toc-text"> SimpleRAR</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-9"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94-10"><span class="toc-text"> 解答</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#base64stego"><span class="toc-text"> base64stego</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-10"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94-11"><span class="toc-text"> 解答</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8A%9F%E5%A4%AB%E5%86%8D%E9%AB%98%E4%B9%9F%E6%80%95%E8%8F%9C%E5%88%80"><span class="toc-text"> 功夫再高也怕菜刀</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-11"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94-12"><span class="toc-text"> 解答</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A5%E5%85%85"><span class="toc-text"> 补充</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://pic.lufer.cc/images/2021/03/15/eI1UWd.jpg"></div><div class="author-info__name text-center">Lufer</div><div class="author-info__description text-center">新的一天开始啦</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">75</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">31</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">18</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">大佬们</div><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="https://www.yuque.com/grace-gu">Grace</a><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="http://1ogisk.cn/">Logik</a><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="https://blog.legume.ltd">豆哥</a><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="http://esportnosave.cn/">EsportsNoSave</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://pic.lufer.cc/images/2021/03/15/eI1dSA.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Lufer</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">主页</a><a class="site-page" href="/archives">归档</a><a class="site-page" href="/categories">分类</a><a class="site-page" href="/tags">标签</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a></span></div><div id="post-info"><div id="post-title">攻防世界MISC新手练习题</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2021-08-10</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/CTF/">CTF</a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">2.1k</span><span class="post-meta__separator">|</span><span>阅读时长: 7 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="this_is_flag"><a class="markdownIt-Anchor" href="#this_is_flag"></a> this_is_flag</h1>
+<h2 id="题目"><a class="markdownIt-Anchor" href="#题目"></a> 题目</h2>
+<p>  难度系数： 2.0<br />
+  题目来源： 暂无<br />
+  题目描述：Most flags are in the form flag{xxx}, for example:flag{th1s_!s_a_d4m0_4la9}<br />
+  题目场景： 暂无<br />
+  题目附件： 暂无</p>
+<h2 id="解答"><a class="markdownIt-Anchor" href="#解答"></a> 解答</h2>
+<p>  样例题，直接复制题目中给出的<code>flag&#123;th1s_!s_a_d4m0_4la9&#125;</code>。</p>
+<h1 id="pdf"><a class="markdownIt-Anchor" href="#pdf"></a> pdf</h1>
+<h2 id="题目-2"><a class="markdownIt-Anchor" href="#题目-2"></a> 题目</h2>
+<p>  难度系数： 3.0<br />
+  题目来源： csaw<br />
+  题目描述：菜猫给了菜狗一张图，说图下面什么都没有<br />
+  题目场景： 暂无</p>
+<h2 id="解答-2"><a class="markdownIt-Anchor" href="#解答-2"></a> 解答</h2>
+<p>  题目提示是图下面什么都没有，直接打开pdf并全选复制，可得到图下面的字符串<code>flag&#123;security_through_obscurity&#125;</code></p>
+<h1 id="如来十三掌"><a class="markdownIt-Anchor" href="#如来十三掌"></a> 如来十三掌</h1>
+<h2 id="题目-3"><a class="markdownIt-Anchor" href="#题目-3"></a> 题目</h2>
+<p>  难度系数： 3.0<br />
+  题目来源： 暂无<br />
+  题目描述：菜狗为了打败菜猫，学了一套如来十三掌。<br />
+  题目场景： 暂无</p>
+<h2 id="解答-3"><a class="markdownIt-Anchor" href="#解答-3"></a> 解答</h2>
+<p>  题目附件是一个word，打开之后这段文字可以联想到佛语加密，在前面加上<code>佛曰：</code>，然后用佛曰解密。</p>
+<p><a target="_blank" rel="noopener" href="https://www.keyfc.net/bbs/tools/tudoucode.aspx">https://www.keyfc.net/bbs/tools/tudoucode.aspx</a></p>
+<p>  可得到字符串：<code>MzkuM3gvMUAwnzuvn3cgozMlMTuvqzAenJchMUAeqzWenzEmLJW9</code>。</p>
+<p>  联系题目提示“如来十三掌”，再用rot13解密，得到字符串：<code>ZmxhZ3tiZHNjamhia3ptbmZyZGhidmNraWpuZHNrdmJramRzYWJ9</code>。</p>
+<p>  最后用Base64解码，得到flag：<code>flag&#123;bdscjhbkzmnfrdhbvckijndskvbkjdsab&#125;</code>。</p>
+<h1 id="give_you_flag"><a class="markdownIt-Anchor" href="#give_you_flag"></a> give_you_flag</h1>
+<h2 id="题目-4"><a class="markdownIt-Anchor" href="#题目-4"></a> 题目</h2>
+<p>  难度系数： 4.0<br />
+  题目来源： 暂无<br />
+  题目描述：菜狗找到了文件中的彩蛋很开心，给菜猫发了个表情包<br />
+  题目场景： 暂无</p>
+<h2 id="解答-4"><a class="markdownIt-Anchor" href="#解答-4"></a> 解答</h2>
+<p>  观察题目附件给出的gif，可以看到闪过一个二维码，将其截取出来。</p>
+<p><img src="https://pic.lufer.cc/images/2021/08/10/image19c2bb7b4dddc35a.png" alt="image19c2bb7b4dddc35a.png" /></p>
+<p>  这张图缺失了三个定位点，手动画一个之后扫描识别可以得到flag。</p>
+<p><img src="https://pic.lufer.cc/images/2021/08/10/imagefda1a35bd985ef02.png" alt="imagefda1a35bd985ef02.png" /></p>
+<p>  <code>flag&#123;e7d478cf6b915f50ab1277f78502a2c5&#125;</code></p>
+<h1 id="stegano"><a class="markdownIt-Anchor" href="#stegano"></a> stegano</h1>
+<h2 id="题目-5"><a class="markdownIt-Anchor" href="#题目-5"></a> 题目</h2>
+<p>  难度系数： 4.0<br />
+  题目来源： CONFidence-DS-CTF-Teaser<br />
+  题目描述：菜狗收到了图后很开心，玩起了pdf 提交格式为flag{xxx}，解密字符需小写<br />
+  题目场景： 暂无</p>
+<h2 id="解答-5"><a class="markdownIt-Anchor" href="#解答-5"></a> 解答</h2>
+<p>  打开PDF，全选复制查看是否有隐藏内容，发现可得到如下字符串。</p>
+<blockquote>
+<p>NoFlagHere! NoFlagHere! NoFlagHere! XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Close - but still not here !<br />
+BABA BBB BA BBA ABA AB B AAB ABAA AB B AA BBB BA AAA BBAABB AABA ABAA AB BBA BBBAAA ABBBB BA AAAB ABBBB AAAAA ABBBB BAAA ABAA AAABB BB AAABB AAAAA AAAAA AAAAB BBA AAABB</p>
+</blockquote>
+<p>  用_替换B，用.替换A，得到字符串：</p>
+<blockquote>
+<p>–…-- …-. .-… .- --. —… .---- -. …- .---- … .---- -… .-… …-- – …-- … … …- --. …–</p>
+</blockquote>
+<p>  解码字符串得到答案：<code>flag&#123;1nv151bl3m3554g3&#125;</code></p>
+<h1 id="坚持60s"><a class="markdownIt-Anchor" href="#坚持60s"></a> 坚持60s</h1>
+<h2 id="题目-6"><a class="markdownIt-Anchor" href="#题目-6"></a> 题目</h2>
+<p>  难度系数： 4.0<br />
+  题目来源： 08067CTF<br />
+  题目描述：菜狗发现最近菜猫不爱理他，反而迷上了菜鸡<br />
+  题目场景： 暂无</p>
+<h2 id="解答-6"><a class="markdownIt-Anchor" href="#解答-6"></a> 解答</h2>
+<p>  附件是一个jar包，考虑用反编译工具进行逆向。<br />
+  在Idea中打开jar包，定位到<code>cn.bjsxt\plane\PlaneGameFrame.class</code>,可以看到如下代码</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">    <span class="keyword">this</span>.printInfo(g, <span class="string">&quot;加油你就是下一个老王&quot;</span>, <span class="number">50</span>, <span class="number">150</span>, <span class="number">300</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">    <span class="keyword">this</span>.printInfo(g, <span class="string">&quot;如果撑过一分钟我岂不是很没面子&quot;</span>, <span class="number">40</span>, <span class="number">30</span>, <span class="number">300</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="number">6</span>:</span><br><span class="line">    <span class="keyword">this</span>.printInfo(g, <span class="string">&quot;flag&#123;RGFqaURhbGlfSmlud2FuQ2hpamk=&#125;&quot;</span>, <span class="number">50</span>, <span class="number">150</span>, <span class="number">300</span>);</span><br></pre></td></tr></table></figure>
+<p>  发现flag字符串结尾有个<code>=</code>，考虑是用base64加密过的，将<code>RGFqaURhbGlfSmlud2FuQ2hpamk=</code>解密后得到<code>DajiDali_JinwanChiji</code>，所以答案为<code>flag&#123;DajiDali_JinwanChiji&#125;</code>。</p>
+<h1 id="gif"><a class="markdownIt-Anchor" href="#gif"></a> gif</h1>
+<h2 id="题目-7"><a class="markdownIt-Anchor" href="#题目-7"></a> 题目</h2>
+<p>  难度系数： 4.0<br />
+  题目来源： 暂无<br />
+  题目描述：菜狗截获了一张菜鸡发给菜猫的动态图，却发现另有玄机<br />
+  题目场景： 暂无</p>
+<h2 id="解答-7"><a class="markdownIt-Anchor" href="#解答-7"></a> 解答</h2>
+<p>  打开附件发现是由黑白两种颜色的图构成，考虑是用二进制表示的ASCII码，共有104张图，而ASCII码的二进制为8位数，故将文件排列成13*8的矩阵排列，根据每一行八张图的黑白，用白色代表0，黑色代表1，得到二进制序列。</p>
+<blockquote>
+<p>01100110 01101100 01100001 01100111 01111011 01000110 01110101 01001110 01011111 01100111 01101001 01000110 01111101 01111101</p>
+</blockquote>
+<p>  转为ASCII码得到答案：<code>flag&#123;FuN_giF&#125;</code>。</p>
+<h1 id="掀桌子"><a class="markdownIt-Anchor" href="#掀桌子"></a> 掀桌子</h1>
+<p>  难度系数： 4.0<br />
+  题目来源： DDCTF2018<br />
+  题目描述：菜狗截获了一份报文如下c8e9aca0c6f2e5f3e8c4efe7a1a0d4e8e5a0e6ece1e7a0e9f3baa0e8eafae3f9e4eafae2eae4e3eaebfaebe3f5e7e9f3e4e3e8eaf9eaf3e2e4e6f2，生气地掀翻了桌子(╯°□°）╯︵ ┻━┻<br />
+  题目场景： 暂无<br />
+  题目附件： 暂无</p>
+<h2 id="解答-8"><a class="markdownIt-Anchor" href="#解答-8"></a> 解答</h2>
+<p>  题目没有附件，就只能从题干字符串得到答案，观察题干字符串可能是16进制数，将字符串两个字符一组，作为16进制数转换为10进制。</p>
+<p>  将10进制数减去128后再转换为ASCII码，得到答案：<br />
+<code>flag&#123;hjzcydjzbjdcjkzkcugisdchjyjsbdfr&#125;</code></p>
+<h1 id="ext3"><a class="markdownIt-Anchor" href="#ext3"></a> ext3</h1>
+<h2 id="题目-8"><a class="markdownIt-Anchor" href="#题目-8"></a> 题目</h2>
+<p>  难度系数： 5.0<br />
+  题目来源： bugku<br />
+  题目描述：今天是菜狗的生日，他收到了一个linux系统光盘<br />
+  题目场景： 暂无</p>
+<h2 id="解答-9"><a class="markdownIt-Anchor" href="#解答-9"></a> 解答</h2>
+<p>  先用Winhex打开附件，搜索flag，可以找到如下内容。</p>
+<p><img src="https://pic.lufer.cc/images/2021/08/10/imagef70387b3841742c8.png" alt="imagef70387b3841742c8.png" /></p>
+<p>  将后缀名改为zip之后解压，找到<code>O7avZhikgKgbF\flag.txt</code>，打开之后发现字符串为<code>ZmxhZ3tzYWpiY2lienNrampjbmJoc2J2Y2pianN6Y3N6Ymt6an0=</code>，用base64解码得到答案：<code>flag&#123;sajbcibzskjjcnbhsbvcjbjszcszbkzj&#125;</code>。</p>
+<h1 id="simplerar"><a class="markdownIt-Anchor" href="#simplerar"></a> SimpleRAR</h1>
+<h2 id="题目-9"><a class="markdownIt-Anchor" href="#题目-9"></a> 题目</h2>
+<p>  难度系数： 5.0<br />
+  题目来源： 08067CTF<br />
+  题目描述：菜狗最近学会了拼图，这是他刚拼好的，可是却搞错了一块(ps:双图层)<br />
+  题目场景： 暂无</p>
+<h2 id="解答-10"><a class="markdownIt-Anchor" href="#解答-10"></a> 解答</h2>
+<p>  用Winhex打开文件，发现flag.txt后藏了一个secret.png。</p>
+<p><img src="https://pic.lufer.cc/images/2021/08/10/imaged1d57f8656659cf0.png" alt="imaged1d57f8656659cf0.png" /></p>
+<blockquote>
+<p>HEAD_TYPE=0x72 标记块<br />
+HEAD_TYPE=0x73 压缩文件头<br />
+HEAD_TYPE=0x74 文件头<br />
+HEAD_TYPE=0x75 注释头<br />
+HEAD_TYPE=0x76 旧风格的用户身份信息<br />
+HEAD_TYPE=0x77 子块<br />
+HEAD_TYPE=0x78 恢复纪录<br />
+HEAD_TYPE=0x79 用户身份信息<br />
+HEAD_TYPE=0x7a subblock</p>
+</blockquote>
+<p>  根据rar文件格式，将标记处的7A改为文件头的标志74，保存后解压文件，得到secret.png。</p>
+<p>  而secret.png是一个纯白图片，继续用Winhex打开，发现其文件头为<code>GIF89a</code>，考虑这是一个gif文件。</p>
+<p>  根据题目提示双图层，用PS打开，每个图层分别保存为gif文件。</p>
+<p>  用StegSolve打开每个gif，可以得到两个拼接的图片。</p>
+<p><a target="_blank" rel="noopener" href="https://pic.lufer.cc/image/cNmT"><img src="https://pic.lufer.cc/images/2021/08/11/image.th.png" alt="image.th.png" /></a></p>
+<p><a target="_blank" rel="noopener" href="https://pic.lufer.cc/image/cRYr"><img src="https://pic.lufer.cc/images/2021/08/11/imagefb6a4a597307f904.th.png" alt="imagefb6a4a597307f904.th.png" /></a></p>
+<p>  将两个图片拼接，补全定位点，得到最终的二维码。</p>
+<p><a target="_blank" rel="noopener" href="https://pic.lufer.cc/image/cYrp"><img src="https://pic.lufer.cc/images/2021/08/11/imageccebd2ad4fd981b8.th.png" alt="imageccebd2ad4fd981b8.th.png" /></a></p>
+<p>  扫描后得到答案：<code>flag&#123;yanji4n_bu_we1shi&#125;</code>。</p>
+<h1 id="base64stego"><a class="markdownIt-Anchor" href="#base64stego"></a> base64stego</h1>
+<h2 id="题目-10"><a class="markdownIt-Anchor" href="#题目-10"></a> 题目</h2>
+<p>  难度系数： 5.0<br />
+  题目来源： olympicCTF<br />
+  题目描述：菜狗经过几天的学习，终于发现了如来十三掌最后一步的精髓<br />
+  题目场景： 暂无</p>
+<h2 id="解答-11"><a class="markdownIt-Anchor" href="#解答-11"></a> 解答</h2>
+<p>  根据题目名称，可以想到这是一道隐写题目，附件下载之后是个zip，但是解压需要密码，考虑是伪加密。</p>
+<p>  用Winhex打开zip文件，搜索504B，可以找到结果如下。</p>
+<p><img src="https://pic.lufer.cc/images/2021/08/10/image2b8d97fb9733f5be.png" alt="image2b8d97fb9733f5be.png" /></p>
+<p>  根据zip文件格式：</p>
+<blockquote>
+<p>压缩源文件目录区：<br />
+50 4B 01 02：目录中文件文件头标记(0x02014b50)<br />
+3F 00：压缩使用的 pkware 版本<br />
+14 00：解压文件所需 pkware 版本<br />
+00 00：全局方式位标记（有无加密，伪加密的关键）</p>
+</blockquote>
+<p>  可知将<code>3F031403</code>后的<code>0900</code>改为<code>0000</code>可以解除伪加密，修改之后保存文件，得到<code>stego.txt</code>。</p>
+<p>  阅读stego的内容可发现是base64字符串，联系题干的base64隐写，借助脚本解密内容可以得到答案，脚本如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line">b64chars = <span class="string">&#x27;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&#x27;</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;stego.txt&#x27;</span>, <span class="string">&#x27;rb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    flag = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    bin_str = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> f.readlines():</span><br><span class="line">        stegb64 = <span class="built_in">str</span>(line, <span class="string">&quot;utf-8&quot;</span>).strip(<span class="string">&quot;\n&quot;</span>)</span><br><span class="line">        rowb64 = <span class="built_in">str</span>(base64.b64encode(base64.b64decode(stegb64)), <span class="string">&quot;utf-8&quot;</span>).strip(<span class="string">&quot;\n&quot;</span>)</span><br><span class="line">        offset = <span class="built_in">abs</span>(b64chars.index(stegb64.replace(<span class="string">&#x27;=&#x27;</span>, <span class="string">&#x27;&#x27;</span>)[-<span class="number">1</span>]) - b64chars.index(rowb64.replace(<span class="string">&#x27;=&#x27;</span>, <span class="string">&#x27;&#x27;</span>)[-<span class="number">1</span>]))</span><br><span class="line">        equalnum = stegb64.count(<span class="string">&#x27;=&#x27;</span>)  <span class="comment"># no equalnum no offset</span></span><br><span class="line">        <span class="keyword">if</span> equalnum:</span><br><span class="line">            bin_str += <span class="built_in">bin</span>(offset)[<span class="number">2</span>:].zfill(equalnum * <span class="number">2</span>)</span><br><span class="line">        print([<span class="built_in">chr</span>(<span class="built_in">int</span>(bin_str[i:i + <span class="number">8</span>], <span class="number">2</span>)) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(bin_str), <span class="number">8</span>)])</span><br></pre></td></tr></table></figure>
+<p>  得到的结果为<code>Base_sixty_four_point_five</code>，用<code>flag&#123;&#125;</code>套起来就是答案。</p>
+<h1 id="功夫再高也怕菜刀"><a class="markdownIt-Anchor" href="#功夫再高也怕菜刀"></a> 功夫再高也怕菜刀</h1>
+<h2 id="题目-11"><a class="markdownIt-Anchor" href="#题目-11"></a> 题目</h2>
+<p>  难度系数： 6.0<br />
+  题目来源： 安恒杯<br />
+  题目描述：菜狗决定用菜刀和菜鸡决一死战<br />
+  题目场景： 暂无</p>
+<h2 id="解答-12"><a class="markdownIt-Anchor" href="#解答-12"></a> 解答</h2>
+<p>  题目附件给了一个.pcapng文件，是网络流量包文件，用Wireshark打开。</p>
+<p>  在分组字节流中查找flag，可以检索到1150行有<code>flag.txt</code>字样。</p>
+<p><img src="https://pic.lufer.cc/images/2021/08/10/image.png" alt="image.png" /></p>
+<p>  观察报文内容可知这里有一个jpg文件，追踪TCP流，可以看到有FFD8开头的字符串，找到FFD9结尾，并复制出来。</p>
+<p>  这里会找到两个FFD8，但是第一个无法解析，要用后面那个长一点的。</p>
+<p><img src="https://pic.lufer.cc/images/2021/08/10/image860b328bb1e7352e.png" alt="image860b328bb1e7352e.png" /></p>
+<p>  另存为jpg文件，可以得到图片。</p>
+<p><img src="https://pic.lufer.cc/images/2021/08/10/imageea60dd5b24316708.png" alt="imageea60dd5b24316708.png" /></p>
+<p>  可以得到一个密码<code>Th1s_1s_p4sswd_!!!</code>。</p>
+<p>  继续检索<code>flag.txt</code>,可以在1367行找到一段内容。</p>
+<p><img src="https://pic.lufer.cc/images/2021/08/10/image78c95be7ac245787.png" alt="image78c95be7ac245787.png" /></p>
+<p>  考虑这里是一个压缩文件，将<code>-&gt;|</code>到<code>|&lt;-</code>之间的内容复制出来，用Winhex保存为zip文件。</p>
+<p><img src="https://pic.lufer.cc/images/2021/08/10/image5d8f4ebba04021cc.png" alt="image5d8f4ebba04021cc.png" /></p>
+<p>  将压缩文件解压，发现需要密码，使用先前得到的密码，得到flag.txt,从而得到答案：<code>flag&#123;3OpWdJ-JP6FzK-koCMAK-VkfWBq-75Un2z&#125;</code>。</p>
+<h2 id="补充"><a class="markdownIt-Anchor" href="#补充"></a> 补充</h2>
+<p>  将pcapng直接改名为zip文件，用360压缩可以直接打开。</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Lufer</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://coder.lufer.cc/CTF/攻防世界MISC新手练习题/">https://coder.lufer.cc/CTF/攻防世界MISC新手练习题/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://coder.lufer.cc">Lufer</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/CTF/">CTF</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/CTF/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8CWeb%E6%96%B0%E6%89%8B%E7%BB%83%E4%B9%A0%E9%A2%98/"><i class="fa fa-chevron-left">  </i><span>攻防世界Web新手练习题</span></a></div><div class="next-post pull-right"><a href="/%E5%89%8D%E7%AB%AF/AntDesign%20Pro%20V5%20%E5%88%B0%E5%BA%95%E6%80%8E%E4%B9%88%E7%94%A8%E4%B9%8Bplugin-request/"><span>AntDesign Pro V5 到底怎么用之plugin-request</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="vcomment"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = 'true' == 'true';
+var verify = 'false' == 'true';
+var record_ip = '' == 'true';
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  recordIP:record_ip,
+  appId:'VqMxq8YhQKdt87hjlDYA4UDq-MdYXbMMI',
+  appKey:'jMbPNFw1782lMDtEz6mIwhx4',
+  placeholder:'早8点-晚11点会自动发送邮件提醒',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang: 'zh-cn'
+})</script></div></div><footer class="footer-bg" style="background-image: url(https://pic.lufer.cc/images/2021/03/15/eI1dSA.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2016 - 2021 By Lufer</div><div class="framework-info"><span>驱动 - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="footer_custom_text">hitokoto</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.0"></script><script src="/js/fancybox.js?version=1.9.0"></script><script src="/js/sidebar.js?version=1.9.0"></script><script src="/js/copy.js?version=1.9.0"></script><script src="/js/fireworks.js?version=1.9.0"></script><script src="/js/transition.js?version=1.9.0"></script><script src="/js/scroll.js?version=1.9.0"></script><script src="/js/head.js?version=1.9.0"></script><script src="/js/search/algolia.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css"><script src="/js/katex.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="algolia-search"><div class="search-dialog__title" id="algolia-search-title">Algolia</div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><hr><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="攻防世界Web新手练习题"><meta name="keywords" content="CTF"><meta name="author" content="Lufer"><meta name="copyright" content="Lufer"><title>攻防世界Web新手练习题 | Lufer</title><link rel="shortcut icon" href="https://pic.lufer.cc/images/2021/03/15/eI1NJH.png"><link rel="stylesheet" href="/css/index.css?version=1.9.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.css"><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.js" defer></script><link rel="dns-prefetch" href="https://hm.baidu.com"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?e2cd7e52254704223bd3b9c0461bc06e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();</script><script src="https://www.googletagmanager.com/gtag/js?id=G-T5L2KPFS29"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-T5L2KPFS29');</script><script src="https://v1.hitokoto.cn/?encode=js&amp;charset=utf-8&amp;select=.footer_custom_text" defer></script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"D3K0O2R6F2","apiKey":"4e808ae377111360493e99d31970584c","indexName":"BLOG_LUFER","hits":{"per_page":10},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容:${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  hexoVersion: '5.3.0'
+} </script><meta name="generator" content="Hexo 5.3.0"></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#view_source"><span class="toc-text"> view_source</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94"><span class="toc-text"> 解答</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#robots"><span class="toc-text"> robots</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-2"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94-2"><span class="toc-text"> 解答</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#backup"><span class="toc-text"> backup</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-3"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94-3"><span class="toc-text"> 解答</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cookie"><span class="toc-text"> cookie</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-4"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94-4"><span class="toc-text"> 解答</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#disabled_button"><span class="toc-text"> disabled_button</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-5"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94-5"><span class="toc-text"> 解答</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#weak_auth"><span class="toc-text"> weak_auth</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-6"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94-6"><span class="toc-text"> 解答</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#simple_php"><span class="toc-text"> simple_php</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-7"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94-7"><span class="toc-text"> 解答</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#get_post"><span class="toc-text"> get_post</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-8"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94-8"><span class="toc-text"> 解答</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#xff_referer"><span class="toc-text"> xff_referer</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-9"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94-9"><span class="toc-text"> 解答</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#webshell"><span class="toc-text"> webshell</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-10"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94-10"><span class="toc-text"> 解答</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#command_execution"><span class="toc-text"> command_execution</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-11"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94-11"><span class="toc-text"> 解答</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#simple_js"><span class="toc-text"> simple_js</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-12"><span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94-12"><span class="toc-text"> 解答</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://pic.lufer.cc/images/2021/03/15/eI1UWd.jpg"></div><div class="author-info__name text-center">Lufer</div><div class="author-info__description text-center">新的一天开始啦</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">75</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">31</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">18</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">大佬们</div><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="https://www.yuque.com/grace-gu">Grace</a><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="http://1ogisk.cn/">Logik</a><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="https://blog.legume.ltd">豆哥</a><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="http://esportnosave.cn/">EsportsNoSave</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://pic.lufer.cc/images/2021/03/15/eI1dSA.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Lufer</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">主页</a><a class="site-page" href="/archives">归档</a><a class="site-page" href="/categories">分类</a><a class="site-page" href="/tags">标签</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a></span></div><div id="post-info"><div id="post-title">攻防世界Web新手练习题</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2021-08-11</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/CTF/">CTF</a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">1.6k</span><span class="post-meta__separator">|</span><span>阅读时长: 6 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="view_source"><a class="markdownIt-Anchor" href="#view_source"></a> view_source</h1>
+<h2 id="题目"><a class="markdownIt-Anchor" href="#题目"></a> 题目</h2>
+<p>  难度系数：1.0<br />
+  题目来源： Cyberpeace-n3k0<br />
+  题目描述：X老师让小宁同学查看一个网页的源代码，但小宁同学发现鼠标右键好像不管用了</p>
+<h2 id="解答"><a class="markdownIt-Anchor" href="#解答"></a> 解答</h2>
+<p>  F12得到答案：<code>cyberpeace&#123;0d141ae981465634833f8446a771e484&#125;</code>。</p>
+<h1 id="robots"><a class="markdownIt-Anchor" href="#robots"></a> robots</h1>
+<h2 id="题目-2"><a class="markdownIt-Anchor" href="#题目-2"></a> 题目</h2>
+<p>  难度系数： 1.0<br />
+  题目来源： Cyberpeace-n3k0<br />
+  题目描述：X老师上课讲了Robots协议，小宁同学却上课打了瞌睡，赶紧来教教小宁Robots协议是什么吧。</p>
+<h2 id="解答-2"><a class="markdownIt-Anchor" href="#解答-2"></a> 解答</h2>
+<p>  根据题目所说robots协议，访问场景下的<code>/robots.txt</code>文件，得到如下内容：</p>
+<blockquote>
+<p>User-agent: *<br />
+Disallow:<br />
+Disallow: f1ag_1s_h3re.php</p>
+</blockquote>
+<p>  再访问<code>/f1ag_1s_h3re.php</code>。得到答案:<code>cyberpeace&#123;b18c54f0bf9f4a64c0aecff3248d6650&#125;</code>。</p>
+<h1 id="backup"><a class="markdownIt-Anchor" href="#backup"></a> backup</h1>
+<h2 id="题目-3"><a class="markdownIt-Anchor" href="#题目-3"></a> 题目</h2>
+<p>  难度系数： 1.0<br />
+  题目来源： Cyberpeace-n3k0<br />
+  题目描述：X老师忘记删除备份文件，他派小宁同学去把备份文件找出来,一起来帮小宁同学吧！</p>
+<h2 id="解答-3"><a class="markdownIt-Anchor" href="#解答-3"></a> 解答</h2>
+<p>  根据页面描述：<code>你知道index.php的备份文件名吗？</code>，尝试访问<code>index.php.bak</code>，下载后打开得到答案：<code>Cyberpeace&#123;855A1C4B3401294CB6604CCC98BDE334&#125;</code>。</p>
+<h1 id="cookie"><a class="markdownIt-Anchor" href="#cookie"></a> cookie</h1>
+<h2 id="题目-4"><a class="markdownIt-Anchor" href="#题目-4"></a> 题目</h2>
+<p>  难度系数： 1.0<br />
+  题目来源： Cyberpeace-n3k0<br />
+  题目描述：X老师告诉小宁他在cookie里放了些东西，小宁疑惑地想：‘这是夹心饼干的意思吗？’</p>
+<h2 id="解答-4"><a class="markdownIt-Anchor" href="#解答-4"></a> 解答</h2>
+<p>  根据题目描述，F12查看网络请求的cookie，得到<code>look-here=cookie.php</code>。<br />
+  访问cookie.php，得到提示<code>See the http response</code>，根据提示查看response，在响应头中可以找到答案：<code>flag: cyberpeace&#123;f9bb6af749eaf0a1877956e6c8944722&#125;</code>。</p>
+<h1 id="disabled_button"><a class="markdownIt-Anchor" href="#disabled_button"></a> disabled_button</h1>
+<h2 id="题目-5"><a class="markdownIt-Anchor" href="#题目-5"></a> 题目</h2>
+<p>  难度系数： 1.0<br />
+  题目来源： Cyberpeace-n3k0<br />
+  题目描述：X老师今天上课讲了前端知识，然后给了大家一个不能按的按钮，小宁惊奇地发现这个按钮按不下去，到底怎么才能按下去呢？</p>
+<h2 id="解答-5"><a class="markdownIt-Anchor" href="#解答-5"></a> 解答</h2>
+<p>  把button的disabled属性去掉，点击后得到答案：<code>cyberpeace&#123;aa004bdc9907bdf379f228c385542b7a&#125;</code>。</p>
+<h1 id="weak_auth"><a class="markdownIt-Anchor" href="#weak_auth"></a> weak_auth</h1>
+<h2 id="题目-6"><a class="markdownIt-Anchor" href="#题目-6"></a> 题目</h2>
+<p>  难度系数： 1.0<br />
+  题目来源： Cyberpeace-n3k0<br />
+  题目描述：小宁写了一个登陆验证页面，随手就设了一个密码。</p>
+<h2 id="解答-6"><a class="markdownIt-Anchor" href="#解答-6"></a> 解答</h2>
+<p>  根据题目描述应该是弱密码，尝试使用admin，admin登录失败，尝试使用admin，123456登录得到答案：<code>cyberpeace&#123;e0d6f8c6f59c0934769eda6ad719b2db&#125;</code>。</p>
+<h1 id="simple_php"><a class="markdownIt-Anchor" href="#simple_php"></a> simple_php</h1>
+<h2 id="题目-7"><a class="markdownIt-Anchor" href="#题目-7"></a> 题目</h2>
+<p>  难度系数： 1.0<br />
+  题目来源： Cyberpeace-n3k0<br />
+  题目描述：小宁听说php是最好的语言,于是她简单学习之后写了几行php代码。</p>
+<h2 id="解答-7"><a class="markdownIt-Anchor" href="#解答-7"></a> 解答</h2>
+<p>  网址访问后有如下代码。</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">show_source(<span class="keyword">__FILE__</span>);</span><br><span class="line"><span class="keyword">include</span>(<span class="string">&quot;config.php&quot;</span>);</span><br><span class="line"><span class="variable">$a</span>=@<span class="variable">$_GET</span>[<span class="string">&#x27;a&#x27;</span>];</span><br><span class="line"><span class="variable">$b</span>=@<span class="variable">$_GET</span>[<span class="string">&#x27;b&#x27;</span>];</span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$a</span>==<span class="number">0</span> <span class="keyword">and</span> <span class="variable">$a</span>)&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="variable">$flag1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(is_numeric(<span class="variable">$b</span>))&#123;</span><br><span class="line">    <span class="keyword">exit</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$b</span>&gt;<span class="number">1234</span>)&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="variable">$flag2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>  根据代码逻辑，通过get方式传递a和b两个参数，其中a要为0，但不能为数字0，否则过不去and条件，所以设置为任意字母即可，b要大于1234但不能是纯数字，所以后面加一个字母。</p>
+<p>  访问<code>/?a=a&amp;b=1235c</code>即可得到答案：<code>Cyberpeace&#123;647E37C7627CC3E4019EC69324F66C7C&#125;</code>。</p>
+<h1 id="get_post"><a class="markdownIt-Anchor" href="#get_post"></a> get_post</h1>
+<h2 id="题目-8"><a class="markdownIt-Anchor" href="#题目-8"></a> 题目</h2>
+<p>  难度系数： 2.0<br />
+  题目来源： Cyberpeace-n3k0<br />
+  题目描述：X老师告诉小宁同学HTTP通常使用两种请求方法，你知道是哪两种吗？</p>
+<h2 id="解答-8"><a class="markdownIt-Anchor" href="#解答-8"></a> 解答</h2>
+<p>  访问页面获得提示<code>请用GET方式提交一个名为a,值为1的变量</code>。<br />
+  访问<code>/?a=1</code>得到提示:<code>请用GET方式提交一个名为a,值为1的变量，请再以POST方式随便提交一个名为b,值为2的变量</code>。</p>
+<p>  打开Postman，给链接<code>/?a=1</code>发送一个POST请求，body中b的值为2。</p>
+<p><img src="https://pic.lufer.cc/images/2021/08/11/image5956081436e977b6.png" alt="image5956081436e977b6.png" /></p>
+<p>  得到答案:<code>cyberpeace&#123;7213df1a0d7ff4813ff1784115d7285c&#125;</code>。</p>
+<h1 id="xff_referer"><a class="markdownIt-Anchor" href="#xff_referer"></a> xff_referer</h1>
+<h2 id="题目-9"><a class="markdownIt-Anchor" href="#题目-9"></a> 题目</h2>
+<p>  难度系数： 2.0<br />
+  题目来源： Cyberpeace-n3k0<br />
+  题目描述：X老师告诉小宁其实xff和referer是可以伪造的。</p>
+<h2 id="解答-9"><a class="markdownIt-Anchor" href="#解答-9"></a> 解答</h2>
+<p>  访问网址，提示为<code>ip地址必须为123.123.123.123</code>。<br />
+  用Postman访问链接，头部添加<code>X-Forwarded-For</code>，值为给定的IP地址，得到新的提示：<code>必须来自https://www.google.com</code>。</p>
+<p><img src="https://pic.lufer.cc/images/2021/08/11/image9afae6b20532fe58.png" alt="image9afae6b20532fe58.png" /></p>
+<p>  于是再添加referer，值为<code>https://www.google.com</code>。</p>
+<p><img src="https://pic.lufer.cc/images/2021/08/11/imagee8256c6ae34c615a.png" alt="imagee8256c6ae34c615a.png" /></p>
+<p>  得到答案：<code>cyberpeace&#123;5b7a2438c6df8a7fb89edb484b2fea4d&#125;</code>。</p>
+<h1 id="webshell"><a class="markdownIt-Anchor" href="#webshell"></a> webshell</h1>
+<h2 id="题目-10"><a class="markdownIt-Anchor" href="#题目-10"></a> 题目</h2>
+<p>  难度系数： 2.0<br />
+  题目来源： Cyberpeace-n3k0<br />
+  题目描述：小宁百度了php一句话,觉着很有意思,并且把它放在index.php里。</p>
+<h2 id="解答-10"><a class="markdownIt-Anchor" href="#解答-10"></a> 解答</h2>
+<p>  根据提示可以知道是WebShell攻击，用中国菜刀添加网址，得到flag.txt。打开获得答案：<code>cyberpeace&#123;41e76883815baf71fba1a2e29d3e65b9&#125;</code>。</p>
+<h1 id="command_execution"><a class="markdownIt-Anchor" href="#command_execution"></a> command_execution</h1>
+<h2 id="题目-11"><a class="markdownIt-Anchor" href="#题目-11"></a> 题目</h2>
+<p>  难度系数： 2.0<br />
+  题目来源： Cyberpeace-n3k0<br />
+  题目描述：小宁写了个ping功能,但没有写waf,X老师告诉她这是非常危险的，你知道为什么吗。</p>
+<h2 id="解答-11"><a class="markdownIt-Anchor" href="#解答-11"></a> 解答</h2>
+<p>  网站只有一个ping输入框，考虑可以用ping并带其他命令的方式来执行，执行<code>127.0.0.1|find / -name &quot;flag.*&quot;</code>搜索服务器本地的flag文件。</p>
+<blockquote>
+<p>ping -c 3 127.0.0.1|find / -name “flag.*”<br />
+/home/flag.txt</p>
+</blockquote>
+<p>  然后访问这个文件，<code>127.0.0.1|cat /home/flag.txt</code>，得到答案：<code>cyberpeace&#123;c72bd8829fd9cab078eff060ffc63713&#125;</code>。</p>
+<h1 id="simple_js"><a class="markdownIt-Anchor" href="#simple_js"></a> simple_js</h1>
+<h2 id="题目-12"><a class="markdownIt-Anchor" href="#题目-12"></a> 题目</h2>
+<p>  难度系数： 3.0<br />
+  题目来源： root-me<br />
+  题目描述：小宁发现了一个网页，但却一直输不对密码。(Flag格式为 Cyberpeace{xxxxxxxxx} )</p>
+<h2 id="解答-12"><a class="markdownIt-Anchor" href="#解答-12"></a> 解答</h2>
+<p>  访问之后发现需要输入密码，根据题目描述考虑可能是有js脚本，F12查看网页源码，发现如下代码：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;title&gt;JS&lt;/title&gt;</span><br><span class="line">    &lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">dechiffre</span>(<span class="params">pass_enc</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> pass = <span class="string">&quot;70,65,85,88,32,80,65,83,83,87,79,82,68,32,72,65,72,65&quot;</span>;</span><br><span class="line">        <span class="keyword">var</span> tab  = pass_enc.split(<span class="string">&#x27;,&#x27;</span>);</span><br><span class="line">        <span class="keyword">var</span> tab2 = pass.split(<span class="string">&#x27;,&#x27;</span>);</span><br><span class="line">        <span class="keyword">var</span> i,j,k,l=<span class="number">0</span>,m,n,o,p = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        i = <span class="number">0</span>;</span><br><span class="line">        j = tab.length;</span><br><span class="line">        k = j + (l) + (n=<span class="number">0</span>);</span><br><span class="line">        n = tab2.length;</span><br><span class="line">        <span class="keyword">for</span>(i = (o=<span class="number">0</span>); i &lt; (k = j = n); i++ )&#123;</span><br><span class="line">            o = tab[i-l];p += <span class="built_in">String</span>.fromCharCode((o = tab2[i]));</span><br><span class="line">            <span class="keyword">if</span>(i == <span class="number">5</span>)<span class="keyword">break</span>;&#125;</span><br><span class="line">        <span class="keyword">for</span>(i = (o=<span class="number">0</span>); i &lt; (k = j = n); i++ )&#123;</span><br><span class="line">            o = tab[i-l];</span><br><span class="line">            <span class="keyword">if</span>(i &gt; <span class="number">5</span> &amp;&amp; i &lt; k-<span class="number">1</span>)</span><br><span class="line">                p += <span class="built_in">String</span>.fromCharCode((o = tab2[i]));</span><br><span class="line">        &#125;</span><br><span class="line">        p += <span class="built_in">String</span>.fromCharCode(tab2[<span class="number">17</span>]);</span><br><span class="line">        pass = p;<span class="keyword">return</span> pass;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">String</span>[<span class="string">&quot;fromCharCode&quot;</span>](dechiffre(<span class="string">&quot;\x35\x35\x2c\x35\x36\x2c\x35\x34\x2c\x37\x39\x2c\x31\x31\x35\x2c\x36\x39\x2c\x31\x31\x34\x2c\x31\x31\x36\x2c\x31\x30\x37\x2c\x34\x39\x2c\x35\x30&quot;</span>));</span><br><span class="line"></span><br><span class="line">    h = <span class="built_in">window</span>.prompt(<span class="string">&#x27;Enter password&#x27;</span>);</span><br><span class="line">    alert( dechiffre(h) );</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>  将后面的<code>\x35\x35\x2c\x35\x36\x2c\x35\x34\x2c\x37\x39\x2c\x31\x31\x35\x2c\x36\x39\x2c\x31\x31\x34\x2c\x31\x31\x36\x2c\x31\x30\x37\x2c\x34\x39\x2c\x35\x30</code>进行16进制到字符的转换，可以得到：<code>55,56,54,79,115,69,114,116,107,49,50</code>。<br />
+  转换为对应的ASCII码得到<code>786OsErtk12</code>，故答案为<code>Cyberpeace&#123;786OsErtk12&#125;</code>。</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Lufer</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://coder.lufer.cc/CTF/攻防世界Web新手练习题/">https://coder.lufer.cc/CTF/攻防世界Web新手练习题/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://coder.lufer.cc">Lufer</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/CTF/">CTF</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/CTF/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8CMISC%E6%96%B0%E6%89%8B%E7%BB%83%E4%B9%A0%E9%A2%98/"><span>攻防世界MISC新手练习题</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="vcomment"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = 'true' == 'true';
+var verify = 'false' == 'true';
+var record_ip = '' == 'true';
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  recordIP:record_ip,
+  appId:'VqMxq8YhQKdt87hjlDYA4UDq-MdYXbMMI',
+  appKey:'jMbPNFw1782lMDtEz6mIwhx4',
+  placeholder:'早8点-晚11点会自动发送邮件提醒',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang: 'zh-cn'
+})</script></div></div><footer class="footer-bg" style="background-image: url(https://pic.lufer.cc/images/2021/03/15/eI1dSA.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2016 - 2021 By Lufer</div><div class="framework-info"><span>驱动 - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="footer_custom_text">hitokoto</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.0"></script><script src="/js/fancybox.js?version=1.9.0"></script><script src="/js/sidebar.js?version=1.9.0"></script><script src="/js/copy.js?version=1.9.0"></script><script src="/js/fireworks.js?version=1.9.0"></script><script src="/js/transition.js?version=1.9.0"></script><script src="/js/scroll.js?version=1.9.0"></script><script src="/js/head.js?version=1.9.0"></script><script src="/js/search/algolia.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css"><script src="/js/katex.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="algolia-search"><div class="search-dialog__title" id="algolia-search-title">Algolia</div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><hr><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
