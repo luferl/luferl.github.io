@@ -50,11 +50,11 @@ https://www.keyfc.net/bbs/tools/tudoucode.aspx
 ## 解答
 &emsp;&emsp;观察题目附件给出的gif，可以看到闪过一个二维码，将其截取出来。
 
-![image19c2bb7b4dddc35a.png](https://pic.lufer.cc/images/2021/08/10/image19c2bb7b4dddc35a.png)
+![](https://pic.lufer.cc/images/2021/08/10/image19c2bb7b4dddc35a.png)
 
 &emsp;&emsp;这张图缺失了三个定位点，手动画一个之后扫描识别可以得到flag。
 
-![imagefda1a35bd985ef02.png](https://pic.lufer.cc/images/2021/08/10/imagefda1a35bd985ef02.png)
+![](https://pic.lufer.cc/images/2021/08/10/imagefda1a35bd985ef02.png)
 
 &emsp;&emsp;`flag{e7d478cf6b915f50ab1277f78502a2c5}`
 
@@ -126,7 +126,7 @@ BABA BBB BA BBA ABA AB B AAB ABAA AB B AA BBB BA AAA BBAABB AABA ABAA AB BBA BBB
 ## 解答
 &emsp;&emsp;先用Winhex打开附件，搜索flag，可以找到如下内容。
 
-![imagef70387b3841742c8.png](https://pic.lufer.cc/images/2021/08/10/imagef70387b3841742c8.png)
+![](https://pic.lufer.cc/images/2021/08/10/imagef70387b3841742c8.png)
 
 &emsp;&emsp;将后缀名改为zip之后解压，找到`O7avZhikgKgbF\flag.txt`，打开之后发现字符串为`ZmxhZ3tzYWpiY2lienNrampjbmJoc2J2Y2pianN6Y3N6Ymt6an0=`，用base64解码得到答案：`flag{sajbcibzskjjcnbhsbvcjbjszcszbkzj}`。
 
@@ -139,7 +139,7 @@ BABA BBB BA BBA ABA AB B AAB ABAA AB B AA BBB BA AAA BBAABB AABA ABAA AB BBA BBB
 ## 解答
 &emsp;&emsp;用Winhex打开文件，发现flag.txt后藏了一个secret.png。
 
-![imaged1d57f8656659cf0.png](https://pic.lufer.cc/images/2021/08/10/imaged1d57f8656659cf0.png)
+![](https://pic.lufer.cc/images/2021/08/10/imaged1d57f8656659cf0.png)
 
 > HEAD_TYPE=0x72 标记块  
     HEAD_TYPE=0x73 压缩文件头  
@@ -159,13 +159,13 @@ BABA BBB BA BBA ABA AB B AAB ABAA AB B AA BBB BA AAA BBAABB AABA ABAA AB BBA BBB
 
 &emsp;&emsp;用StegSolve打开每个gif，可以得到两个拼接的图片。
 
-![image.png](https://pic.lufer.cc/images/2021/08/11/image.png)
+![](https://pic.lufer.cc/images/2021/08/11/image.png)
 
-![imagefb6a4a597307f904.png](https://pic.lufer.cc/images/2021/08/11/imagefb6a4a597307f904.png)
+![](https://pic.lufer.cc/images/2021/08/11/imagefb6a4a597307f904.png)
 
 &emsp;&emsp;将两个图片拼接，补全定位点，得到最终的二维码。
 
-![imageccebd2ad4fd981b8.png](https://pic.lufer.cc/images/2021/08/11/imageccebd2ad4fd981b8.png)
+![](https://pic.lufer.cc/images/2021/08/11/imageccebd2ad4fd981b8.png)
 
 &emsp;&emsp;扫描后得到答案：`flag{yanji4n_bu_we1shi}`。
 # base64stego
@@ -179,7 +179,7 @@ BABA BBB BA BBA ABA AB B AAB ABAA AB B AA BBB BA AAA BBAABB AABA ABAA AB BBA BBB
 
 &emsp;&emsp;用Winhex打开zip文件，搜索504B，可以找到结果如下。
 
-![image2b8d97fb9733f5be.png](https://pic.lufer.cc/images/2021/08/10/image2b8d97fb9733f5be.png)
+![](https://pic.lufer.cc/images/2021/08/10/image2b8d97fb9733f5be.png)
 
 &emsp;&emsp;根据zip文件格式：
 
@@ -220,27 +220,27 @@ with open('stego.txt', 'rb') as f:
 
 &emsp;&emsp;在分组字节流中查找flag，可以检索到1150行有`flag.txt`字样。
 
-![image.png](https://pic.lufer.cc/images/2021/08/10/image.png)
+![](https://pic.lufer.cc/images/2021/08/10/image.png)
 
 &emsp;&emsp;观察报文内容可知这里有一个jpg文件，追踪TCP流，可以看到有FFD8开头的字符串，找到FFD9结尾，并复制出来。
 
 &emsp;&emsp;这里会找到两个FFD8，但是第一个无法解析，要用后面那个长一点的。
 
-![image860b328bb1e7352e.png](https://pic.lufer.cc/images/2021/08/10/image860b328bb1e7352e.png)
+![](https://pic.lufer.cc/images/2021/08/10/image860b328bb1e7352e.png)
 
 &emsp;&emsp;另存为jpg文件，可以得到图片。
 
-![imageea60dd5b24316708.png](https://pic.lufer.cc/images/2021/08/10/imageea60dd5b24316708.png)
+![](https://pic.lufer.cc/images/2021/08/10/imageea60dd5b24316708.png)
 
 &emsp;&emsp;可以得到一个密码`Th1s_1s_p4sswd_!!!`。
 
 &emsp;&emsp;继续检索`flag.txt`,可以在1367行找到一段内容。
 
-![image78c95be7ac245787.png](https://pic.lufer.cc/images/2021/08/10/image78c95be7ac245787.png)
+![](https://pic.lufer.cc/images/2021/08/10/image78c95be7ac245787.png)
 
 &emsp;&emsp;考虑这里是一个压缩文件，将`->|`到`|<-`之间的内容复制出来，用Winhex保存为zip文件。
 
-![image5d8f4ebba04021cc.png](https://pic.lufer.cc/images/2021/08/10/image5d8f4ebba04021cc.png)
+![](https://pic.lufer.cc/images/2021/08/10/image5d8f4ebba04021cc.png)
 
 &emsp;&emsp;将压缩文件解压，发现需要密码，使用先前得到的密码，得到flag.txt,从而得到答案：`flag{3OpWdJ-JP6FzK-koCMAK-VkfWBq-75Un2z}`。
 
