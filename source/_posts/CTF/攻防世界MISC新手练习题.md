@@ -1,7 +1,7 @@
 ---
 title: 攻防世界MISC新手练习题
 date: 2021-08-10 09:22:20
-tags: [CTF]
+tags: [CTF,MISC]
 categories: CTF
 ---
 # this_is_flag 

@@ -1,7 +1,7 @@
 ---
 title: 攻防世界Web新手练习题
 date: 2021-08-11 00:17:19
-tags: [CTF]
+tags: [CTF,Web]
 categories: CTF
 ---
 # view_source
