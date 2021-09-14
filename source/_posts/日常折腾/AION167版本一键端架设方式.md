@@ -3,7 +3,6 @@ title: AION167版本一键端架设方式
 categories: 日常折腾
 date: 2016-05-23 13:14:27
 tags: [日常折腾]
-categories: 日常折腾
 ---
 
 &emsp;&emsp;云盘链接https://yunpan.cn/cSPXUiRhCQhyF （提取码：a168） 
