@@ -159,13 +159,14 @@ BABA BBB BA BBA ABA AB B AAB ABAA AB B AA BBB BA AAA BBAABB AABA ABAA AB BBA BBB
 
 &emsp;&emsp;用StegSolve打开每个gif，可以得到两个拼接的图片。
 
-![image.png](https://pic.lufer.cc/images/2021/08/11/image.png)
+[![image.th.png](https://pic.lufer.cc/images/2021/08/11/image.th.png)](https://pic.lufer.cc/image/cNmT)
 
-![imagefb6a4a597307f904.png](https://pic.lufer.cc/images/2021/08/11/imagefb6a4a597307f904.png)
+[![imagefb6a4a597307f904.th.png](https://pic.lufer.cc/images/2021/08/11/imagefb6a4a597307f904.th.png)](https://pic.lufer.cc/image/cRYr)
 
 &emsp;&emsp;将两个图片拼接，补全定位点，得到最终的二维码。
 
-![imageccebd2ad4fd981b8.png](https://pic.lufer.cc/images/2021/08/11/imageccebd2ad4fd981b8.png)
+[![imageccebd2ad4fd981b8.th.png](https://pic.lufer.cc/images/2021/08/11/imageccebd2ad4fd981b8.th.png)](https://pic.lufer.cc/image/cYrp)
+
 
 &emsp;&emsp;扫描后得到答案：`flag{yanji4n_bu_we1shi}`。
 # base64stego
