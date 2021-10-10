@@ -1,7 +1,7 @@
 ---
 title: 自建Chevereto图床并设置邀请码注册
 date: 2021-03-05 16:23:24
-tags: [日常折腾]
+tags: [日常折腾,NAS]
 categories: 日常折腾
 ---
 &emsp;&emsp;之前一直在用`imgchr.com`的图床，但是近期发现无法上传图片，访问倒是正常。

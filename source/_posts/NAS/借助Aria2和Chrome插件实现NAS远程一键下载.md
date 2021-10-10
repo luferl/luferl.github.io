@@ -1,7 +1,7 @@
 ---
 title: 借助Aria2和Chrome插件实现NAS远程一键下载
 date: 2021-04-06 09:52:44
-tags: [日常折腾]
+tags: [日常折腾,NAS]
 categories: 日常折腾
 ---
 # Docker安装Aria2
