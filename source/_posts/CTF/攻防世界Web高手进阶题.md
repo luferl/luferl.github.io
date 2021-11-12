@@ -12,7 +12,7 @@ categories: CTF
 ## 解答
 &emsp;&emsp;根据提示，直接访问index.php，发现被重定向回1.php，F12看请求，找到答案。
 
-[![](https://pic.lufer.cc/images/2021/08/12/image81e277c1fdc7463e.md.png)](https://pic.lufer.cc/image/dcwo)
+[![](https://pic.lufer.cc:8089/images/2021/08/12/image81e277c1fdc7463e.md.png)](https://pic.lufer.cc:8089/image/dcwo)
 
 # Training-WWW-Robots
 ## 题目
@@ -81,10 +81,10 @@ include($page);
 &emsp;&emsp;先采用input方法执行ls指令来查看目录下都有什么文件。  
 &emsp;&emsp;由于代码中对php进行了替换，借助str_replace对大小写敏感来绕过替换。
 
-![](https://pic.lufer.cc/images/2021/08/12/image4c3fad9ca61d3e16.png)
+![](https://pic.lufer.cc:8089/images/2021/08/12/image4c3fad9ca61d3e16.png)
 
 &emsp;&emsp;发现目录下有疑似flag的文件，cat一下内容。
 
-![](https://pic.lufer.cc/images/2021/08/12/imaged1b72a13a09c1fcf.png)
+![](https://pic.lufer.cc:8089/images/2021/08/12/imaged1b72a13a09c1fcf.png)
 
 &emsp;&emsp;得到答案`ctf{876a5fca-96c6-4cbd-9075-46f0c89475d2}`。

@@ -13,7 +13,7 @@ categories: CTF
 ## 解答
 &emsp;&emsp;把附件图镜像之后得到答案。
 
-![](https://pic.lufer.cc/images/2021/08/12/imagea71a2155963c06c2.png)
+![](https://pic.lufer.cc:8089/images/2021/08/12/imagea71a2155963c06c2.png)
 
 # base64÷4
 ## 题目
@@ -32,7 +32,7 @@ categories: CTF
 &emsp;&emsp;给了一个pcapng，用wireshark打开搜了半天flag也没找到什么内容。  
 &emsp;&emsp;百度了一下，发现直接检索flag就可以，确实很embarrass。
 
-![](https://pic.lufer.cc/images/2021/08/12/image7c4fd1595a4f268b.png)
+![](https://pic.lufer.cc:8089/images/2021/08/12/image7c4fd1595a4f268b.png)
 
 # 神奇的Modbus
 ## 题目
@@ -42,7 +42,7 @@ categories: CTF
 ## 解答
 &emsp;&emsp;附件是一个抓包文件，根据题目提示，关注modbus类型的协议，随便找一条追踪tcp流，发现答案。
 
-![](https://pic.lufer.cc/images/2021/08/12/image02b1e98d656e284f.png)
+![](https://pic.lufer.cc:8089/images/2021/08/12/image02b1e98d656e284f.png)
 
 &emsp;&emsp;但是Easy_Mdbus过不了，要提交Easy_Modbus才可以。
 
@@ -54,7 +54,7 @@ categories: CTF
 ## 解答
 &emsp;&emsp;我搁这解压缩半天，找到了一个congratulations2文件夹，激动半天发现往下走不动了，百度一下发现人家strings一下就搜出来了。
 
-![](https://pic.lufer.cc/images/2021/08/12/image00a34d642dbcd955.png)
+![](https://pic.lufer.cc:8089/images/2021/08/12/image00a34d642dbcd955.png)
 
 # wireshark-1
 ## 题目
@@ -64,7 +64,7 @@ categories: CTF
 ## 解答 
 &emsp;&emsp;打开流量包，检索login，找到用户登录的password。
 
-![](https://pic.lufer.cc/images/2021/08/12/image307b4085e0e9e0e3.png)
+![](https://pic.lufer.cc:8089/images/2021/08/12/image307b4085e0e9e0e3.png)
 
 # pure_color
 ## 题目
@@ -74,4 +74,4 @@ categories: CTF
 ## 解答
 &emsp;&emsp;用StegSolve打开附件，切换通道，得到flag:`true_steganographers_doesnt_need_any_tools`。
 
-[![](https://pic.lufer.cc/images/2021/08/13/image.md.png)](https://pic.lufer.cc/image/dqBK)
+[![](https://pic.lufer.cc:8089/images/2021/08/13/image.md.png)](https://pic.lufer.cc:8089/image/dqBK)

@@ -118,7 +118,7 @@ c       c       e       h       g
 ## 解答
 &emsp;&emsp;用Rsa Tool 2，注意Number Base要选10进制，然后E使用16进制表示的，10进制的17要转换成16进制的11，然后计算D值。
 
-[![](https://pic.lufer.cc/images/2021/08/12/image.md.png)](https://pic.lufer.cc/image/dACE)
+[![](https://pic.lufer.cc:8089/images/2021/08/12/image.md.png)](https://pic.lufer.cc:8089/image/dACE)
 
 &emsp;&emsp;得到答案`cyberpeace{125631357777427553}`。
 

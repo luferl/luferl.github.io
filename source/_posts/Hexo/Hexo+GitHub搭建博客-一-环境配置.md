@@ -49,11 +49,11 @@ ssh-keygen -t rsa -C "your.email@example.com" -b 4096
 
 &emsp;&emsp;打开Github,点击右侧`New Repository`。
 
-![](https://pic.lufer.cc/images/2021/03/15/e4zAeO.png)
+![](https://pic.lufer.cc:8089/images/2021/03/15/e4zAeO.png)
 
 &emsp;&emsp;Repository内部填入与前面Owner部分一样的名字+"github.io",下面选择Public，如下图所示，即完成网站创建。
 
-![](https://pic.lufer.cc/images/2021/03/15/e4zCS1.png)
+![](https://pic.lufer.cc:8089/images/2021/03/15/e4zCS1.png)
 
 ## 安装Hexo
 

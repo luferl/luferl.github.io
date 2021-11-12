@@ -205,17 +205,17 @@ export default ()=>{
 
 &emsp;&emsp;随便点进去一个区块，readme里面写了个命令教你怎么安装。
 
-![区块readme](https://pic.lufer.cc/images/2021/08/03/image.png)
+![区块readme](https://pic.lufer.cc:8089/images/2021/08/03/image.png)
 
 &emsp;&emsp;你以为你用这个命令能装上？Navie，直接给你一个报错，让你当场懵逼。
 
-![报错](https://pic.lufer.cc/images/2021/08/03/image380b55601b8c34b5.png)
+![报错](https://pic.lufer.cc:8089/images/2021/08/03/image380b55601b8c34b5.png)
 
 &emsp;&emsp;最后搜到了一个issue，https://github.com/ant-design/ant-design-pro/issues/4534
 
 &emsp;&emsp;这个issue下面有一个开发者说了一句话：
 
-![开发者回复](https://pic.lufer.cc/images/2021/08/03/imagec6eeffa7aa285503.png)
+![开发者回复](https://pic.lufer.cc:8089/images/2021/08/03/imagec6eeffa7aa285503.png)
 
 &emsp;&emsp;你以为你把命令改成`umi block add AccountSettings`就行了？Naive，会报跟先前一样的错。
 
@@ -226,7 +226,7 @@ export default ()=>{
 &emsp;&emsp;于是我把命令改成了`umi block add https://github.com/ant-design/pro-blocks/tree/master/AccountSettings`，安装成功。
 
 安装成功之后页面起不来，控制台报错：
-![缺少组件](https://pic.lufer.cc/images/2021/08/03/image30e044d1c08dfac3.png)
+![缺少组件](https://pic.lufer.cc:8089/images/2021/08/03/image30e044d1c08dfac3.png)
 
 &emsp;&emsp;试图删掉node_modules重新`npm install`结果项目整个起不来了，最后还是特么重新建的项目，不想整这个区块了，还不如自己写。
 

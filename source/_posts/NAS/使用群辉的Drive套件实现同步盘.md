@@ -21,7 +21,7 @@ categories: 日常折腾
 
 &emsp;&emsp;重启了一下NAS，菜单里面就出现了Drive。
 
-![装好Drive的菜单](https://pic.lufer.cc/images/2021/10/10/image.png)
+![装好Drive的菜单](https://pic.lufer.cc:8089/images/2021/10/10/image.png)
 
 &emsp;&emsp;菜单里面会有两个新项目，`Drive管理控制台`和`Drive`。
 
@@ -34,20 +34,35 @@ categories: 日常折腾
 
 &emsp;&emsp;打开`Drive管理控制台`，进入`团队文件夹`选项，把刚创建的文件夹启用。
 
-![启用文件夹](https://pic.lufer.cc/images/2021/10/10/image345edfc2f4605009.png)
+![启用文件夹](https://pic.lufer.cc:8089/images/2021/10/10/image345edfc2f4605009.png)
 
 &emsp;&emsp;启用的时候会有一个对话框，全部默认点确定就行。
 
 &emsp;&emsp;启用之后服务端的设置就已经完成了。
 
 # FRP内网穿透
-&emsp;&emsp;修改Docker里面的frpc.ini，添加一条穿透记录，采用tcp的方式穿透6690端口
+这里要注意，针对PC客户端和手机客户端，使用的端口是不一样的，我一开始仅穿透6690端口，PC端使用毫无问题，但是手机客户端无法连接，还需穿透5000和5001端口。
+&emsp;&emsp;修改Docker里面的frpc.ini，添加一条穿透记录，采用tcp的方式穿透6690，5000,5001端口
 ```ini
 [lufer_Drive]
 type=tcp
 local_ip=127.0.0.1
 local_port=6690
 remote_port=6690
+custom_domains=设置的域名
+
+[lufer_DriveforHTTP]
+type=tcp
+local_ip=127.0.0.1
+local_port=5000
+remote_port=5000
+custom_domains=设置的域名
+
+[lufer_DriveforHTTPS]
+type=tcp
+local_ip=127.0.0.1
+local_port=5001
+remote_port=5001
 custom_domains=设置的域名
 ```
 &emsp;&emsp;随后在域名的DNS解析记录中添加上要用来解析的域名，把frpc.ini传回Docker文件夹，重启FRP服务。
@@ -61,7 +76,7 @@ custom_domains=设置的域名
 
 &emsp;&emsp;这里借用了别人的图，因为我已经设置过了，先点铅笔，选择Drive中的文件夹，再配置本地文件夹，然后下一步即可。
 
-![文件夹设置](https://pic.lufer.cc/images/2021/10/10/imagedb2ac653df8692ee.png)
+![文件夹设置](https://pic.lufer.cc:8089/images/2021/10/10/imagedb2ac653df8692ee.png)
 
 &emsp;&emsp;下一步有一个共享盘，这个没什么用，跳过就行，然后就完成了配置。
 
@@ -70,4 +85,4 @@ custom_domains=设置的域名
 
 &emsp;&emsp;实际用起来速度还是很快的。
 
-![任务同步](https://pic.lufer.cc/images/2021/10/10/16338399341.png)
+![任务同步](https://pic.lufer.cc:8089/images/2021/10/10/16338399341.png)

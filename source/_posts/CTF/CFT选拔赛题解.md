@@ -51,7 +51,7 @@ print(s1)
 ```
 &emsp;&emsp;其中计算部分系数使用下图，本题函数系数25，采用25的逆元，还是25。
 
-![](https://pic.lufer.cc/images/2021/08/13/imagea466b9588dea63a3.png)
+![](https://pic.lufer.cc:8089/images/2021/08/13/imagea466b9588dea63a3.png)
 
 &emsp;&emsp;答案：`sangfor{sangforynb}`
 
@@ -167,6 +167,6 @@ http://sangforctfweb2.free.idcfengye.com/web1.html
 ### 解答
 &emsp;&emsp;根据提示，在附件的抓包里面寻找password，找到记录之后追踪TCP流。
 
-![](https://pic.lufer.cc/images/2021/08/17/image.png)
+![](https://pic.lufer.cc:8089/images/2021/08/17/image.png)
 
 &emsp;&emsp;用找到的Password作为密码解压附件中的压缩包，得到答案`sangfor{hiahiahiahiathisistheflag}`。

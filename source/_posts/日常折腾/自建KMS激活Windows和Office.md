@@ -108,15 +108,15 @@ slmgr /dlv
 ## Office Tool Plus激活
 &emsp;&emsp;打开Office Tool Plus，进入部署功能，选择所需版本的批量授权版，进行安装，由于Office套装不带Visio，我这里还额外添加了Visio，选好之后点右上角“开始部署”即可。
 
-![部署](https://pic.lufer.cc/images/2021/04/22/image.png)
+![部署](https://pic.lufer.cc:8089/images/2021/04/22/image.png)
 
 &emsp;&emsp;随后会进入自动安装过程。
 
-![开始安装](https://pic.lufer.cc/images/2021/04/22/image5b3b15c6e68d1379.png)
+![开始安装](https://pic.lufer.cc:8089/images/2021/04/22/image5b3b15c6e68d1379.png)
 
 返回首页，进入激活功能。
 
-![激活界面](https://pic.lufer.cc/images/2021/04/22/imagec0f74af727608cab.png)
+![激活界面](https://pic.lufer.cc:8089/images/2021/04/22/imagec0f74af727608cab.png)
 
 &emsp;&emsp;展开许可证管理，选择刚才安装的产品，然后安装许可证。  
 &emsp;&emsp;如果安装了其他产品，需要都安装许可证，例如我装了Visio，就还要在安装一次Visio的许可证。  
@@ -125,7 +125,7 @@ slmgr /dlv
 
 &emsp;&emsp;成功激活。
 
-![激活成功](https://pic.lufer.cc/images/2021/04/22/imaged294b529ce92b2cf.png)
+![激活成功](https://pic.lufer.cc:8089/images/2021/04/22/imaged294b529ce92b2cf.png)
 
 ## 手动激活
 &emsp;&emsp;以Office2016为例，查找 Office 安装目录，默认情况下 Office 2016 64 位版安装目录为`C:\Program Files\Microsoft Office\Office16`，其他版本请自行查找。  

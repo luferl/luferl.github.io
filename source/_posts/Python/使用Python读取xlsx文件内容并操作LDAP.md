@@ -14,7 +14,7 @@ categories: Python
 
 &emsp;&emsp;`新建-对象`，类选择`user`，填写用户名，我这里创建了一个`testuser`。
 
-![新建用户](https://pic.lufer.cc/images/2021/09/24/image.png)
+![新建用户](https://pic.lufer.cc:8089/images/2021/09/24/image.png)
 
 &emsp;&emsp;然后在创建好的用户上`右键-重置密码`，设置一个密码。
 
@@ -24,7 +24,7 @@ categories: Python
 
 &emsp;&emsp;选择`添加DN`，把刚刚创建的用户DN（distinguishedName）添加进去，例如`CN=testuser,DC=tobaccoid,DC=com`
 
-![添加到管理员列表](https://pic.lufer.cc/images/2021/09/24/imageb87c894861b52aaf.png)
+![添加到管理员列表](https://pic.lufer.cc:8089/images/2021/09/24/imageb87c894861b52aaf.png)
 
 &emsp;&emsp;至此就可以用这个用户名和密码进行简单身份验证登录了。
 

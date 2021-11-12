@@ -62,10 +62,10 @@ root@p1614135807:/usr/bin# youtube-dl -f 313 https://www.youtube.com/watch?v=tO0
 ```
 &emsp;&emsp;可以看出网速还是很猛的。
 
-![youtube-dl下载速度](https://pic.lufer.cc/images/2021/09/14/image77982ce962f6953c.png)
+![youtube-dl下载速度](https://pic.lufer.cc:8089/images/2021/09/14/image77982ce962f6953c.png)
 
 &emsp;&emsp;还可以通过 -a 的参数指定外部文件列表，这样就可以排着下载了。
-![通过文件列表下载视频](https://pic.lufer.cc/images/2021/09/14/imagea0a0f0fb987aeb1c.png)
+![通过文件列表下载视频](https://pic.lufer.cc:8089/images/2021/09/14/imagea0a0f0fb987aeb1c.png)
 
 # FileBrowser
 &emsp;&emsp;FileBrowser是一个轻量的文件浏览器，可以对指定的文件夹进行在线的管理，官网：https://github.com/filebrowser/filebrowser
@@ -85,7 +85,7 @@ filebrowser -a 0.0.0.0 -p 9333
 
 &emsp;&emsp;然后就可以通过IP:3333访问了，把文件下载链接直接扔到Download Station里面，网速依然很猛。
 
-![群辉直接从VPS下载](https://pic.lufer.cc/images/2021/09/14/image.png)
+![群辉直接从VPS下载](https://pic.lufer.cc:8089/images/2021/09/14/image.png)
 
 # MKVtoolnix
 &emsp;&emsp;下载下来的视频和音频是分开的，需要使用工具将其合成。  

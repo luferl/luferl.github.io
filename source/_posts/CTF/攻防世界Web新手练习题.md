@@ -98,7 +98,7 @@ if($b>1234){
 
 &emsp;&emsp;打开Postman，给链接`/?a=1`发送一个POST请求，body中b的值为2。
 
-![](https://pic.lufer.cc/images/2021/08/11/image5956081436e977b6.png)
+![](https://pic.lufer.cc:8089/images/2021/08/11/image5956081436e977b6.png)
 
 &emsp;&emsp;得到答案:`cyberpeace{7213df1a0d7ff4813ff1784115d7285c}`。
 
@@ -111,11 +111,11 @@ if($b>1234){
 &emsp;&emsp;访问网址，提示为`ip地址必须为123.123.123.123`。  
 &emsp;&emsp;用Postman访问链接，头部添加`X-Forwarded-For`，值为给定的IP地址，得到新的提示：`必须来自https://www.google.com`。
 
-![](https://pic.lufer.cc/images/2021/08/11/image9afae6b20532fe58.png)
+![](https://pic.lufer.cc:8089/images/2021/08/11/image9afae6b20532fe58.png)
 
 &emsp;&emsp;于是再添加referer，值为`https://www.google.com`。
 
-![](https://pic.lufer.cc/images/2021/08/11/imagee8256c6ae34c615a.png)
+![](https://pic.lufer.cc:8089/images/2021/08/11/imagee8256c6ae34c615a.png)
 
 &emsp;&emsp;得到答案：`cyberpeace{5b7a2438c6df8a7fb89edb484b2fea4d}`。 
 
